@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "fvNCXES4yqZEH0SZ3JAzyhrJ89GDcK8WPB8lkZWlepk=",
+  "Source": "Teryt.WebApi",
+  "BasePath": "_content/Teryt.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

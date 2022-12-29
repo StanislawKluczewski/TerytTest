@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{2A80AB4E-660D-43BF-BBD9-4A6999C42F8B}"
+	ProjectSection(SolutionItems) = preProject
+		docker.sh = docker.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{19B88A36-0D18-4566-881D-223A2AA3BF7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "diagrams", "diagrams", "{7209965A-AF26-411E-A6A0-A84572099C8F}"
+	ProjectSection(SolutionItems) = preProject
+		databasediagram.drawio = databasediagram.drawio
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Teryt.WebApi", "Teryt.WebApi", "{CB393D7C-699A-45E3-8EE8-71155B0D5243}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Teryt.WebApi", "Teryt.WebApi\Teryt.WebApi.csproj", "{2F3F3BCB-C627-4657-895F-FD7E2C32ECB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F3F3BCB-C627-4657-895F-FD7E2C32ECB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F3F3BCB-C627-4657-895F-FD7E2C32ECB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F3F3BCB-C627-4657-895F-FD7E2C32ECB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F3F3BCB-C627-4657-895F-FD7E2C32ECB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CB393D7C-699A-45E3-8EE8-71155B0D5243} = {19B88A36-0D18-4566-881D-223A2AA3BF7E}
+		{2F3F3BCB-C627-4657-895F-FD7E2C32ECB5} = {CB393D7C-699A-45E3-8EE8-71155B0D5243}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {702FA076-F3F5-4BA9-A68C-D9CAFBA1DD24}
+	EndGlobalSection
+EndGlobal
