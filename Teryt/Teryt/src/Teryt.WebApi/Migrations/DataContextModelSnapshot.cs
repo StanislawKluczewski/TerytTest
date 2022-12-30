@@ -88,14 +88,28 @@ namespace Teryt.WebApi.Migrations
 
             modelBuilder.Entity("Teryt.WebApi.Models.ULIC", b =>
                 {
+                    b.Property<string>("Cecha")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("GminaId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Nazwa1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nazwa2")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PowiatId")
                         .HasColumnType("int");
 
                     b.Property<int>("RodzGminaId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("StanNa")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("SymNumer")
                         .HasColumnType("int");

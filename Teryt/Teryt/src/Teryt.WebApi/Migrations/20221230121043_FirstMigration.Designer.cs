@@ -12,7 +12,7 @@ using Teryt.WebApi.Data;
 namespace Teryt.WebApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221229185727_FirstMigration")]
+    [Migration("20221230121043_FirstMigration")]
     partial class FirstMigration
     {
         /// <inheritdoc />
@@ -91,14 +91,28 @@ namespace Teryt.WebApi.Migrations
 
             modelBuilder.Entity("Teryt.WebApi.Models.ULIC", b =>
                 {
+                    b.Property<string>("Cecha")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("GminaId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Nazwa1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nazwa2")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PowiatId")
                         .HasColumnType("int");
 
                     b.Property<int>("RodzGminaId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("StanNa")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("SymNumer")
                         .HasColumnType("int");

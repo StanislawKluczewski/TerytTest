@@ -1,6 +1,8 @@
+global using Teryt.WebApi.Models;
 using MediatR;
 using System.Reflection;
 using Teryt.WebApi.Data;
+
 
 var builder = WebApplication.CreateBuilder(args);
 

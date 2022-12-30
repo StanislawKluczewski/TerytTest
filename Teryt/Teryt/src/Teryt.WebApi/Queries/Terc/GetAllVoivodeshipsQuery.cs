@@ -1,9 +1,8 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Teryt.WebApi.Data;
-using Teryt.WebApi.Models;
 
-namespace Teryt.WebApi.CQRS.Queries
+namespace Teryt.WebApi.Queries.Terc
 {
     public class GetAllVoivodeshipsQuery : IRequest<IEnumerable<TERC>>
     {
@@ -13,7 +12,7 @@ namespace Teryt.WebApi.CQRS.Queries
 
             public GetAllVoivodeshipsHandler(DataContext _context)
             {
-                this.context = _context;
+                context = _context;
             }
             public async Task<IEnumerable<TERC>> Handle(GetAllVoivodeshipsQuery request, CancellationToken cancellationToken)
             {
@@ -22,6 +21,6 @@ namespace Teryt.WebApi.CQRS.Queries
             }
         }
 
-      
+
     }
 }
