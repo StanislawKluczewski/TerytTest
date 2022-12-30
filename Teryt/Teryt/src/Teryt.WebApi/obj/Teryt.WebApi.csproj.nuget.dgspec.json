@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\klucz\\OneDrive\\Pulpit\\Stasiu\\Github\\Teryt\\Teryt\\Teryt.WebApi\\Teryt.WebApi.csproj": {}
+    "C:\\Users\\klucz\\OneDrive\\Pulpit\\Stasiu\\Github\\Teryt\\Teryt\\Teryt\\src\\Teryt.WebApi\\Teryt.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\klucz\\OneDrive\\Pulpit\\Stasiu\\Github\\Teryt\\Teryt\\Teryt.WebApi\\Teryt.WebApi.csproj": {
+    "C:\\Users\\klucz\\OneDrive\\Pulpit\\Stasiu\\Github\\Teryt\\Teryt\\Teryt\\src\\Teryt.WebApi\\Teryt.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\klucz\\OneDrive\\Pulpit\\Stasiu\\Github\\Teryt\\Teryt\\Teryt.WebApi\\Teryt.WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\klucz\\OneDrive\\Pulpit\\Stasiu\\Github\\Teryt\\Teryt\\Teryt\\src\\Teryt.WebApi\\Teryt.WebApi.csproj",
         "projectName": "Teryt.WebApi",
-        "projectPath": "C:\\Users\\klucz\\OneDrive\\Pulpit\\Stasiu\\Github\\Teryt\\Teryt\\Teryt.WebApi\\Teryt.WebApi.csproj",
+        "projectPath": "C:\\Users\\klucz\\OneDrive\\Pulpit\\Stasiu\\Github\\Teryt\\Teryt\\Teryt\\src\\Teryt.WebApi\\Teryt.WebApi.csproj",
         "packagesPath": "C:\\Users\\klucz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\klucz\\OneDrive\\Pulpit\\Stasiu\\Github\\Teryt\\Teryt\\Teryt.WebApi\\obj\\",
+        "outputPath": "C:\\Users\\klucz\\OneDrive\\Pulpit\\Stasiu\\Github\\Teryt\\Teryt\\Teryt\\src\\Teryt.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

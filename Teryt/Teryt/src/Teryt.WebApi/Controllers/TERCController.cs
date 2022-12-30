@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
-using Teryt.WebApi.CQRS.Queries;
+using Teryt.WebApi.Queries.Terc;
 
 namespace Teryt.WebApi.Controllers
 {

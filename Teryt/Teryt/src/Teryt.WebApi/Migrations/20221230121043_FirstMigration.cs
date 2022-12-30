@@ -55,9 +55,10 @@ namespace Teryt.WebApi.Migrations
                     GminaId = table.Column<int>(type: "int", nullable: false),
                     RodzGminaId = table.Column<int>(type: "int", nullable: false),
                     SymNumer = table.Column<int>(type: "int", nullable: false),
+                    SymNumerUlicy = table.Column<int>(type: "int", nullable: false),
                     Cecha = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Nazwa1 = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Nazwa2 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Nazwa2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     StanNa = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>

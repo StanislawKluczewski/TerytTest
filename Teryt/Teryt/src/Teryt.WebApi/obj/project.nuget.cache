@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "POvFmrd9xf0gA2TIGpgYHTSET02Ajz2OoxKd5OrJ1ws92chT0XG/qBkVJOvtfFTR7grrrRjsGJAQmYxwu7p4CA==",
+  "dgSpecHash": "gSpjnGDisBMFWFN3biUWcYMXxyK5MrN8uWzciGbZiTM2QWI0zwq3PFfJyPtcDAUH9F1+4pnSivJgGRCGXw4wWg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\klucz\\OneDrive\\Pulpit\\Stasiu\\Github\\Teryt\\Teryt\\Teryt.WebApi\\Teryt.WebApi.csproj",
+  "projectFilePath": "C:\\Users\\klucz\\OneDrive\\Pulpit\\Stasiu\\Github\\Teryt\\Teryt\\Teryt\\src\\Teryt.WebApi\\Teryt.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\klucz\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\klucz\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
