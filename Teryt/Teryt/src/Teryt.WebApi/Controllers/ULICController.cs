@@ -17,13 +17,13 @@ namespace Teryt.WebApi.Controllers
             this.mediator = mediator;
         }
         [HttpGet]
-        [Route("DajUlice")]
+        [Route("/DajUlice")]
         public async Task<IActionResult> GetStreetByNameAndSymNumber(string nazwa, int number)
         {
             return Ok(await mediator.Send(new GetStreetByNameAndSymNumberQuery { Nazwa1 = nazwa, SymNumer = number }));
         }
         [HttpPost]
-        [Route("DodajULIC")]
+        [Route("/DodajULIC")]
         public async Task<IActionResult>CreateULIC(CreateUlicCommand command)
         {
             return Ok(await mediator.Send(command));
