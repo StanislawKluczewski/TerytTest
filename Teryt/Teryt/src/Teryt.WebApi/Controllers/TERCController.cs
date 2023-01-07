@@ -23,7 +23,7 @@ namespace Teryt.WebApi.Controllers
             return Ok(await mediator.Send(new GetAllVoivodeshipsQuery()));
         }
         [HttpGet]
-        [Route("/DajWojewodztwo/{id}")]
+        [Route("/DajWojewodztwo")]
         public async Task<IActionResult> GetVoivodeshipById(int id)
         {
             return Ok(await mediator.Send(new GetVoivodeshipByIdQuery { Id = id }));
