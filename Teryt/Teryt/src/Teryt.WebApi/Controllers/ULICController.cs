@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Teryt.WebApi.Commands.Ulic;
-using Teryt.WebApi.Queries.Ulic;
 
 namespace Teryt.WebApi.Controllers
 {
@@ -16,17 +15,13 @@ namespace Teryt.WebApi.Controllers
         {
             this.mediator = mediator;
         }
-        [HttpGet]
-        [Route("/DajUlice")]
-        public async Task<IActionResult> GetStreetByNameAndSymNumber(string nazwa, int number)
-        {
-            return Ok(await mediator.Send(new GetStreetByNameAndSymNumberQuery { Nazwa1 = nazwa, SymNumer = number }));
-        }
+
         [HttpPost]
-        [Route("/DodajULIC")]
-        public async Task<IActionResult>CreateULIC(CreateUlicCommand command)
+        [Route("/DajUlice")]
+        public async Task<IActionResult>GetStreets(GetStreetsCommand command)
         {
             return Ok(await mediator.Send(command));
         }
+      
     }
 }

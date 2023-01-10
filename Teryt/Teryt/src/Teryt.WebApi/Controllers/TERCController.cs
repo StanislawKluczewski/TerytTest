@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
-using Teryt.WebApi.Queries.Terc;
+using Teryt.WebApi.Commands.Terc;
 
 namespace Teryt.WebApi.Controllers
 {
@@ -16,23 +16,32 @@ namespace Teryt.WebApi.Controllers
             this.mediator = mediator;
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("/DajWojewodztwa")]
-        public async Task<IActionResult> GetAllVoivodeships()
+        public async Task<IActionResult> GetAllVoivodeships(GetVoivodeshipsCommand command)
         {
-            return Ok(await mediator.Send(new GetAllVoivodeshipsQuery()));
+            return Ok(await mediator.Send(command));
         }
-        [HttpGet]
+
+        [HttpPost]
         [Route("/DajWojewodztwo")]
-        public async Task<IActionResult> GetVoivodeshipById(int id)
+        public async Task<IActionResult> GetVoivodeshipById(GetVoivodeshipByIdCommand command)
         {
-            return Ok(await mediator.Send(new GetVoivodeshipByIdQuery { Id = id }));
+            return Ok(await mediator.Send(command));
         }
-        [HttpGet]
+
+        [HttpPost]
         [Route("/DajMiasta")]
-        public async Task<IActionResult> GetCities()
+        public async Task <IActionResult> GetAllCities(GetCititesCommand command)
         {
-            return Ok(await mediator.Send(new GetCitiesQuery()));
+            return Ok(await mediator.Send(command));
+        }
+
+        [HttpPost]
+        [Route("/DajPowiaty")]
+        public async Task <IActionResult>GetCounties(GetCountiesCommand command)
+        {
+            return Ok(await mediator.Send(command));
         }
     }
 }
