@@ -5,8 +5,11 @@ namespace Teryt.WebApi.Data
 {
     public class DataContext : DbContext
     {
-        public DataContext(DbContextOptions options) : base(options)
+        protected readonly IConfiguration configuration;
+
+        public DataContext(DbContextOptions options, IConfiguration configuration) : base(options)
         {
+            this.configuration = configuration;
         }
 
         public DbSet<TERC> TERCs { get; set; }
@@ -21,7 +24,8 @@ namespace Teryt.WebApi.Data
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=localhost;Database=Teryt;user=sa;password=Studenci2022;TrustServerCertificate=true;");
+            var connectionString = configuration.GetConnectionString("TerrytDatabase");
+            optionsBuilder.UseSqlServer(connectionString);
         }
     }
 }
