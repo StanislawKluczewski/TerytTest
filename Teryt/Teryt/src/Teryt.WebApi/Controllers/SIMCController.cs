@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Teryt.WebApi.Queries.Simc;
+using Teryt.WebApi.Commands.Simc;
 
 namespace Teryt.WebApi.Controllers
 {
@@ -16,18 +16,18 @@ namespace Teryt.WebApi.Controllers
             this.mediator = mediator;
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("/Miasta")]
-        public async Task<IActionResult> GetCities()
+        public async Task<IActionResult> GetCitiesCommand(GetCitiesCommand command)
         {
-            return Ok(await mediator.Send(new GetCitiesQuery()));
+            return Ok(await mediator.Send(command));
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("/DajMiasto")]
-        public async Task<IActionResult> GetCityByName(string nazwa)
+        public async Task<IActionResult>GetCityByNameCommand(GetCityByNameCommand command)
         {
-            return Ok(await mediator.Send(new GetCityByNameQuery { Nazwa = nazwa }));
+            return Ok(await mediator.Send(command));
         }
     }
 }

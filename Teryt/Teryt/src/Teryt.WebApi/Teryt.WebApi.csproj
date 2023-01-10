@@ -22,4 +22,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Queries\Simc\" />
+    <Folder Include="Queries\Terc\" />
+    <Folder Include="Queries\Ulic\" />
+  </ItemGroup>
+
 </Project>
