@@ -29,5 +29,19 @@ namespace Teryt.WebApi.Controllers
         {
             return Ok(await mediator.Send(command));
         }
+
+        [HttpPost]
+        [Route("/DajWsieWPowiecie")]
+        public async Task<IActionResult>GetVillagesInCountyCommand(GetVillagesInCountyCommand command)
+        {
+            return Ok(await mediator.Send(command));
+        }
+
+        [HttpPost]
+        [Route("/DajDelegaturyMiast")]
+        public async Task<IActionResult> GetDeleganciesOfCityByName(GetDeleganciesByCityNameCommand command)
+        {
+            return Ok(await mediator.Send(command));
+        }
     }
 }
