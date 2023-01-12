@@ -22,9 +22,9 @@ You can develop and change the code in a very real sense.
 
 #Used Technologies:
 
-#ASP .NET CORE 6.0(Long Time Support)
-#Microsoft SQL Server 2022
-#Docker 20.10.21
+- ASP .NET CORE 6.0(Long Time Support)
+- Microsoft SQL Server 2022
+- Docker 20.10.21
 
 
 ## API Reference
