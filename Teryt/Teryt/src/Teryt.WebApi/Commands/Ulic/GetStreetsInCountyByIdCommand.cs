@@ -4,9 +4,11 @@ using Teryt.WebApi.DTO.Response;
 
 namespace Teryt.WebApi.Commands.Ulic
 {
-    public class GetStreetsCommand : IRequest<IEnumerable<ULICDto>>
+    public class GetStreetsInCountyByIdCommand : IRequest<IEnumerable<ULICDto>>
     {
-        public class GetStreetsCommandHandler : IRequestHandler<GetStreetsCommand, IEnumerable<ULICDto>>
+        public int WojewodztwoId { get; set; }
+        public int PowiatId { get; set; }
+        public class GetStreetsCommandHandler : IRequestHandler<GetStreetsInCountyByIdCommand, IEnumerable<ULICDto>>
         {
             private readonly DataContext context;
 
@@ -15,10 +17,12 @@ namespace Teryt.WebApi.Commands.Ulic
                 this.context = datacontext;
             }
 
-            public async Task<IEnumerable<ULICDto>> Handle(GetStreetsCommand request, CancellationToken cancellationToken)
+            public async Task<IEnumerable<ULICDto>> Handle(GetStreetsInCountyByIdCommand request, CancellationToken cancellationToken)
             {
                 var result = from u in context.ULICs
-                             where u.Cecha == "ul."
+                             where u.Cecha == "ul." 
+                             && u.PowiatId == request.PowiatId 
+                             && u.WojewodztwoId == request.WojewodztwoId
                              select new ULICDto
                              {
                                  WojewodztwoId = u.WojewodztwoId,

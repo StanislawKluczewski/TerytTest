@@ -4,10 +4,10 @@ using Teryt.WebApi.DTO.Response;
 
 namespace Teryt.WebApi.Commands.Simc
 {
-    public class GetCityByNameCommand : IRequest<IEnumerable<SIMCDto>>
+    public class GetCitiesInVoivodeshipByIdCommand : IRequest<IEnumerable<SIMCDto>>
     {
-        public string Nazwa { get; set; }
-        public class GetCityByNameCommandHandler : IRequestHandler<GetCityByNameCommand, IEnumerable<SIMCDto>>
+        public int Id { get; set; }
+        public class GetCityByNameCommandHandler : IRequestHandler<GetCitiesInVoivodeshipByIdCommand, IEnumerable<SIMCDto>>
         {
             private readonly DataContext context;
 
@@ -15,14 +15,16 @@ namespace Teryt.WebApi.Commands.Simc
             {
                 this.context = context;
             }
-            public async Task<IEnumerable<SIMCDto>> Handle(GetCityByNameCommand request, CancellationToken cancellationToken)
+            public async Task<IEnumerable<SIMCDto>> Handle(GetCitiesInVoivodeshipByIdCommand request, CancellationToken cancellationToken)
             {
                 var result = from c in context.SIMCs
                              where (c.SymNumer == c.SymPod && c.RmNumer == 96)
-                             && c.Nazwa == request.Nazwa
+                             && (c.RodzGminaId == 4 || c.RodzGminaId == 1) &&
+                             c.WojewodztwoId == request.Id
+                             orderby c.Nazwa
                              select new SIMCDto
                              {
-                                 Nazwa = request.Nazwa,
+                                 Nazwa = c.Nazwa,
                                  WojewodztwoId = c.WojewodztwoId,
                                  PowiatId = c.PowiatId,
                                  GminaId = c.GminaId,

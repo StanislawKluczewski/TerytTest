@@ -24,8 +24,8 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajMiasto")]
-        public async Task<IActionResult>GetCityByNameCommand(GetCityByNameCommand command)
+        [Route("/DajMiastaWWojewodztwie")]
+        public async Task<IActionResult>GetCityByNameCommand(GetCitiesInVoivodeshipByIdCommand command)
         {
             return Ok(await mediator.Send(command));
         }
@@ -39,7 +39,7 @@ namespace Teryt.WebApi.Controllers
 
         [HttpPost]
         [Route("/DajDelegaturyMiast")]
-        public async Task<IActionResult> GetDeleganciesOfCityByName(GetDeleganciesByCityNameCommand command)
+        public async Task<IActionResult> GetDeleganciesOfCityByName(GetDeleganciesByIdCommand command)
         {
             return Ok(await mediator.Send(command));
         }

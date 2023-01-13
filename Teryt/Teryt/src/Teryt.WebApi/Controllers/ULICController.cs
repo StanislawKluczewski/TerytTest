@@ -17,11 +17,17 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajUlice")]
-        public async Task<IActionResult>GetStreets(GetStreetsCommand command)
+        [Route("/DajUliceWPowiecie")]
+        public async Task<IActionResult> GetStreets(GetStreetsInCountyByIdCommand command)
         {
             return Ok(await mediator.Send(command));
         }
-      
+
+        [HttpPost]
+        [Route("/DajRynki")]
+        public async Task<IActionResult> GetMarketSquaresInCounty(GetMarketSquaresInCountyByIdCommand command)
+        {
+            return Ok(await mediator.Send(command));
+        }
     }
 }
