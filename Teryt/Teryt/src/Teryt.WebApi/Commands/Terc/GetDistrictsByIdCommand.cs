@@ -4,12 +4,12 @@ using Teryt.WebApi.DTO.Response;
 
 namespace Teryt.WebApi.Commands.Terc
 {
-    public class GetDistrictsCommandById : IRequest<IEnumerable<TERCDto>>
+    public class GetDistrictsByIdCommand : IRequest<IEnumerable<TERCDto>>
     {
         public int WojewodztwoId { get; set; }
         public int PowiatId { get; set; }
 
-        public class GetDistrictsCommandByIdHandler : IRequestHandler<GetDistrictsCommandById, IEnumerable<TERCDto>>
+        public class GetDistrictsCommandByIdHandler : IRequestHandler<GetDistrictsByIdCommand, IEnumerable<TERCDto>>
         {
             private readonly DataContext dataContext;
 
@@ -18,7 +18,7 @@ namespace Teryt.WebApi.Commands.Terc
                 this.dataContext = dataContext;
             }
 
-            public async Task<IEnumerable<TERCDto>> Handle(GetDistrictsCommandById request, CancellationToken cancellationToken)
+            public async Task<IEnumerable<TERCDto>> Handle(GetDistrictsByIdCommand request, CancellationToken cancellationToken)
             {
                 var result = from d in dataContext.TERCs
                              where (d.RodzGminaId == 1 || d.RodzGminaId == 2 || d.RodzGminaId == 3)

@@ -46,7 +46,7 @@ namespace Teryt.WebApi.Controllers
 
         [HttpPost]
         [Route("/DajGminy")]
-        public async Task<IActionResult>GetDistrictsById(GetDistrictsCommandById command)
+        public async Task<IActionResult>GetDistrictsById(GetDistrictsByIdCommand command)
         {
             return Ok(await mediator.Send(command));
         }
