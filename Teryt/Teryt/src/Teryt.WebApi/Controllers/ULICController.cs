@@ -29,5 +29,12 @@ namespace Teryt.WebApi.Controllers
         {
             return Ok(await mediator.Send(command));
         }
+
+        [HttpPost]
+        [Route("/DajUliceWMiescie")]
+        public async Task<IActionResult>GetStreetsInCityById(GetStreetsInCityByIdCommand command)
+        {
+            return Ok(await mediator.Send(command));
+        }
     }
 }
