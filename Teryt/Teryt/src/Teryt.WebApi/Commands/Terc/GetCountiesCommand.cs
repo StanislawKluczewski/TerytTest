@@ -18,8 +18,8 @@ namespace Teryt.WebApi.Commands.Terc
             public async Task<IEnumerable<TERCDto>> Handle(GetCountiesCommand request, CancellationToken cancellationToken)
             {
                 var result = from c in context.TERCs
-                             where c.PowiatId != null && c.GminaId == null && c.RodzGminaId == null
-                             && (c.NazwaTerytorialna == "powiat" || c.NazwaTerytorialna == "miasto na prawach powiatu")
+                             where c.PowiatId != null && c.GminaId == 0 && c.RodzGminaId == 0
+                             && c.NazwaTerytorialna != "województwo"
                              select new TERCDto
                              {
                                  WojewodztwoId = c.WojewodztwoId,
