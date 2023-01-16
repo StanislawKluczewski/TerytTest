@@ -1,9 +1,0 @@
-CREATE PROCEDURE DajMiasta
-AS
-SELECT *
-FROM [Terryt].[dbo].[SIMC]
-
-WHERE RM_NUMER = 96 AND  SYM_NUMER = SYMPOD;
-GO
-
--- EXEC DajMiasta

@@ -1,8 +1,0 @@
-CREATE PROCEDURE DajWojewodztwa
-AS
-SELECT WOJEWODZTWO_ID, NAZWA, NAZWA_TERYTORIALNA, STAN_NA
-  FROM [Terryt].[dbo].[TERC]
-  WHERE NAZWA_TERYTORIALNA like 'województwo';
-GO
-
--- EXEC DajWojewodztwa

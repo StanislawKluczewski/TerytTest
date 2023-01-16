@@ -53,6 +53,24 @@ You can develop and change the code in a very real sense.
   POST /api/TERC/DajPowiaty
 ```
 
+##### Get all Districts
+
+```http
+  POST /api/TERC/DajGminy
+```
+
+##### Get all Delegancies And Quarters
+
+```http
+  POST /api/TERC/DajDelegaturyDzielnice
+```
+
+##### Get all Countrysides
+
+```http
+  POST /api/TERC/DajTerenyWiejskie
+```
+
 ### SIMC
 
 ##### Get all cities
@@ -61,14 +79,41 @@ You can develop and change the code in a very real sense.
   POST /api/SIMC/Miasta
 ```
 
-##### Get city by name
+##### Get city in voivodeship by id
 
 ```http
-  POST /api/SIMC/DajMiasto
+  POST /api/SIMC/DajMiastaWWojewodztwie
+```
+
+##### Get villages in county
+
+```http
+  POST /api/SIMC/DajWsieWPowiecie
+```
+
+##### Get delegancies in Cities
+
+```http
+  POST /api/SIMC/DajDelegaturyMiast
 ```
 
 ### ULIC
 
+##### Get street in county
+
 ```http
-  POST /api/ULIC/DajUlice
+  POST /api/ULIC/DajUliceWPowiecie
 ```
+
+##### Get market squares
+
+```http
+  POST /api/ULIC/DajRynki
+```
+
+##### Get streets in city
+
+```http
+  POST /api/ULIC/DajUliceWMiescie
+```
+
