@@ -43,5 +43,38 @@ namespace Teryt.WebApi.Controllers
         {
             return Ok(await mediator.Send(command));
         }
+
+        [HttpPost]
+        [Route("/DajCzesciMiejscowosci")]
+        public async Task<IActionResult>GetPartsOfLocalitiesById(GetPartsOfLocalitiesByIdCommand command)
+        {
+            return Ok(await mediator.Send(command));
+        }
+        [HttpPost]
+        [Route("/DajCaleWsie")]
+        public async Task <IActionResult>GetVillagesById(GetWholeVillagesByIdCommand command)
+        {
+            return Ok(await mediator.Send(command));
+        }
+        [HttpPost]
+        [Route("/DajOsadyWPowiecie")]
+        public async Task<IActionResult>GetSettlementsInCountyById(GetSettlementsInCountyByIdCommand command)
+        {
+            return Ok(await mediator.Send(command));
+        }
+
+        [HttpPost]
+        [Route("/DajCzesciMiasta")]
+        public async Task<IActionResult>GetPartsOfCityById(GetPartsOfCitiesByIdCommand command)
+        {
+            return Ok(await mediator.Send(command));
+        }
+
+        [HttpPost]
+        [Route("/DajSchroniskaTurstyczne")]
+        public async Task<IActionResult>GetTourisiticSheltersInVoivodeshipById(GetTouristicSheltersInVoivodeshipByIdCommand command)
+        {
+            return Ok(await mediator.Send(command));
+        }
     }
 }
