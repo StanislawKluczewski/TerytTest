@@ -97,6 +97,36 @@ Docker 20.10.21
   POST /api/SIMC/DajDelegaturyMiast
 ```
 
+##### Get parts of localities by id
+
+```http
+  POST /api/SIMC/DajCzesciMiejscowosci
+```
+
+##### Get whole villages(with colonies and settlements) by id
+
+```http
+  POST /api/SIMC/DajCaleWsie
+```
+
+##### Get settlements in county by id
+
+```http
+  POST /api/SIMC/DajOsadyWPowiecie
+```
+
+##### Get parts of city by id
+
+```http
+  POST /api/SIMC/DajCzesciMiasta
+```
+
+##### Get touristic shelters in voivodeship by id
+
+```http
+  POST /api/SIMC/DajSchroniskaTurstyczne
+```
+
 ### ULIC
 
 ##### Get street in county
