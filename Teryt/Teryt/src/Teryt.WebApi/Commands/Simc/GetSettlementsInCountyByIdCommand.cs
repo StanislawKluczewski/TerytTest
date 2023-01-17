@@ -4,25 +4,24 @@ using Teryt.WebApi.DTO.Response;
 
 namespace Teryt.WebApi.Commands.Simc
 {
-    public class GetVillagesInCountyCommand : IRequest<IEnumerable<SIMCDto>>
+    public class GetSettlementsInCountyByIdCommand : IRequest<IEnumerable<SIMCDto>>
     {
         public int WojewodztwoId { get; set; }
         public int PowiatId { get; set; }
-        public class GetVillagesInCountyCommandHandler : IRequestHandler<GetVillagesInCountyCommand, IEnumerable<SIMCDto>>
+        public class GetSettlementsInCoutnyByIdCommandHandler : IRequestHandler<GetSettlementsInCountyByIdCommand, IEnumerable<SIMCDto>>
         {
             private readonly DataContext dataContext;
 
-            public GetVillagesInCountyCommandHandler(DataContext dataContext)
+            public GetSettlementsInCoutnyByIdCommandHandler(DataContext dataContext)
             {
                 this.dataContext = dataContext;
             }
 
-            public async Task<IEnumerable<SIMCDto>> Handle(GetVillagesInCountyCommand request, CancellationToken cancellationToken)
+            public async Task<IEnumerable<SIMCDto>> Handle(GetSettlementsInCountyByIdCommand request, CancellationToken cancellationToken)
             {
                 var result = from s in dataContext.SIMCs
-                             from t in dataContext.TERCs
-                             where s.RmNumer == 1 && t.WojewodztwoId == request.WojewodztwoId &&
-                             t.PowiatId == request.PowiatId && s.WojewodztwoId == request.WojewodztwoId
+                             where (s.RmNumer == 4 || s.RmNumer == 5)
+                             && s.WojewodztwoId == request.WojewodztwoId
                              && s.PowiatId == request.PowiatId
                              select new SIMCDto
                              {
@@ -33,7 +32,6 @@ namespace Teryt.WebApi.Commands.Simc
                                  RodzGminaId = s.RodzGminaId,
                                  StanNa = s.StanNa
                              };
-
                 return result;
             }
         }

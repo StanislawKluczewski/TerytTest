@@ -18,8 +18,8 @@ namespace Teryt.WebApi.Commands.Terc
             public async Task<IEnumerable<TERCDto>> Handle(GetVoivodeshipsCommand request, CancellationToken cancellationToken)
             {
                 var result = from v in context.TERCs
-                             where v.PowiatId == null && v.GminaId == null
-                             && v.RodzGminaId == null
+                             where v.PowiatId == 0 && v.GminaId == 0
+                             && v.RodzGminaId == 0 && v.NazwaTerytorialna.Contains("województwo")
                              select new TERCDto
                              {
                                  Nazwa = v.Nazwa,
