@@ -147,3 +147,20 @@ You can develop and change the code in a very real sense.
   POST /api/ULIC/DajUliceWMiescie
 ```
 
+##### Get all path in Poland
+
+```http
+  POST /api/ULIC/DajDrogi
+```
+
+##### Get all bridges in voivodeship by id
+
+```http
+  POST /api/ULIC/DajMostyWWojewodztwie
+```
+
+##### Get all parks in voivodeship by id
+
+```http
+  POST /api/ULIC/DajParkiWWojewodztwie
+```

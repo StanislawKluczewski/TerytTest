@@ -4,32 +4,26 @@ using Teryt.WebApi.DTO.Response;
 
 namespace Teryt.WebApi.Commands.Ulic
 {
-    public class GetStreetsInCityByIdCommand : IRequest<IEnumerable<ULICDto>>
+    public class GetParksInVoivodeshipByIdCommand : IRequest<IEnumerable<ULICDto>>
     {
         public int WojewodztwoId { get; set; }
-        public int PowiatId { get; set; }
-        public int GminaId { get; set; }
-
-        public class GetStreetsInDistrictByIdCommandHandler : IRequestHandler<GetStreetsInCityByIdCommand, IEnumerable<ULICDto>>
+        public class GetAllParkInVoivodeshipByIdCommandHandler : IRequestHandler<GetParksInVoivodeshipByIdCommand, IEnumerable<ULICDto>>
         {
             private readonly DataContext dataContext;
 
-            public GetStreetsInDistrictByIdCommandHandler(DataContext dataContext)
+            public GetAllParkInVoivodeshipByIdCommandHandler(DataContext dataContext)
             {
                 this.dataContext = dataContext;
             }
 
-            public async Task<IEnumerable<ULICDto>> Handle(GetStreetsInCityByIdCommand request, CancellationToken cancellationToken)
+            public async Task<IEnumerable<ULICDto>> Handle(GetParksInVoivodeshipByIdCommand request, CancellationToken cancellationToken)
             {
                 var result = from u in dataContext.ULICs
                              join s in dataContext.SIMCs
-                             on u.WojewodztwoId equals s.WojewodztwoId
+                             on u.SymNumer equals s.SymNumer
                              where u.WojewodztwoId == request.WojewodztwoId
                              && s.WojewodztwoId == request.WojewodztwoId
-                             && u.PowiatId == request.PowiatId && u.GminaId == request.GminaId
-                             && s.PowiatId == request.PowiatId && s.GminaId == request.GminaId
-                             && u.RodzGminaId == 4 && s.RodzGminaId == 4
-                             && s.RmNumer == 99 && u.Cecha.Contains("ul.")
+                             && (u.Cecha.Contains("park") || u.Cecha.Contains("ogród"))
                              select new ULICDto
                              {
                                  WojewodztwoId = u.WojewodztwoId,
