@@ -26,7 +26,7 @@ namespace Teryt.WebApi.Commands.Terc
                                  NazwaTerytorialna = t.NazwaTerytorialna,
                                  StanNa = t.StanNa
                              };
-                return result;
+                return await Task.FromResult(result);
             }
         }
     }

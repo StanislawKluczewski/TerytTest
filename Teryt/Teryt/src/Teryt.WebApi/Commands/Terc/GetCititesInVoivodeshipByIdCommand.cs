@@ -4,9 +4,10 @@ using Teryt.WebApi.DTO.Response;
 
 namespace Teryt.WebApi.Commands.Terc
 {
-    public class GetCititesCommand : IRequest<IEnumerable<TERCDto>>
+    public class GetCititesInVoivodeshipByIdCommand : IRequest<IEnumerable<TERCDto>>
     {
-        public class GetCitiesCommandHandler : IRequestHandler<GetCititesCommand, IEnumerable<TERCDto>>
+        public int WojewodztwoId { get; set; }
+        public class GetCitiesCommandHandler : IRequestHandler<GetCititesInVoivodeshipByIdCommand, IEnumerable<TERCDto>>
         {
             private readonly DataContext context;
 
@@ -15,10 +16,11 @@ namespace Teryt.WebApi.Commands.Terc
                 this.context = context;
             }
 
-            public async Task<IEnumerable<TERCDto>> Handle(GetCititesCommand request, CancellationToken cancellationToken)
+            public async Task<IEnumerable<TERCDto>> Handle(GetCititesInVoivodeshipByIdCommand request, CancellationToken cancellationToken)
             {
                 var result = from c in context.TERCs
                              where (c.RodzGminaId == 3 || c.RodzGminaId == 4 || c.RodzGminaId == 5)
+                             && c.WojewodztwoId == request.WojewodztwoId
                              select new TERCDto
                              {
                                  Nazwa = c.Nazwa,
@@ -26,7 +28,7 @@ namespace Teryt.WebApi.Commands.Terc
                                  WojewodztwoId = c.WojewodztwoId,
                                  StanNa = c.StanNa
                              };
-                return result;
+                return await Task.FromResult(result);
             }
         }
     }
