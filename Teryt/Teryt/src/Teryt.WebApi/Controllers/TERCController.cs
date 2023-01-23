@@ -31,15 +31,22 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajMiasta")]
-        public async Task <IActionResult> GetAllCities(GetCititesCommand command)
+        [Route("/DajMiastaWWojewodztwie")]
+        public async Task <IActionResult> GetAllCitiesInVoivodeshipById(GetCititesInVoivodeshipByIdCommand command)
         {
             return Ok(await mediator.Send(command));
         }
 
         [HttpPost]
-        [Route("/DajPowiaty")]
-        public async Task <IActionResult>GetCounties(GetCountiesCommand command)
+        [Route("/DajPowiatyWWojewodztwie")]
+        public async Task <IActionResult>GetCountiesInVoivodeshipById(GetCountiesInVoivodeshipByIdCommand command)
+        {
+            return Ok(await mediator.Send(command));
+        }
+
+        [HttpPost]
+        [Route("/DajPowiat")]
+        public async Task<IActionResult> GetCountyById(GetCountyByIdCommand command)
         {
             return Ok(await mediator.Send(command));
         }

@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Teryt.WebApi.Data;
 using Teryt.WebApi.DTO.Response;
 
@@ -18,8 +19,8 @@ namespace Teryt.WebApi.Commands.Terc
             public async Task<IEnumerable<TERCDto>> Handle(GetVoivodeshipsCommand request, CancellationToken cancellationToken)
             {
                 var result = from v in context.TERCs
-                             where v.PowiatId == 0 && v.GminaId == 0
-                             && v.RodzGminaId == 0 && v.NazwaTerytorialna.Contains("województwo")
+                             where v.PowiatId == null && v.GminaId == null
+                             && v.RodzGminaId == null
                              select new TERCDto
                              {
                                  Nazwa = v.Nazwa,
@@ -27,7 +28,7 @@ namespace Teryt.WebApi.Commands.Terc
                                  WojewodztwoId = v.WojewodztwoId,
                                  StanNa = v.StanNa
                              };
-                return result;
+                return await Task.FromResult(result);
             }
         }
     }
