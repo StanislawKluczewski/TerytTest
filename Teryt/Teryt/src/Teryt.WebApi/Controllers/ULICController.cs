@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Teryt.WebApi.Commands.Simc;
 using Teryt.WebApi.Commands.Ulic;
 
 namespace Teryt.WebApi.Controllers
@@ -20,6 +21,32 @@ namespace Teryt.WebApi.Controllers
         [Route("/DajUliceWPowiecie")]
         public async Task<IActionResult> GetStreets(GetStreetsInCountyByIdCommand command)
         {
+            try
+            {
+                if (command is null)
+                {
+                    throw new Exception("Not Found");
+                }
+                else if (command.GetType() != typeof(GetStreetsInCountyByIdCommand))
+                {
+                    throw new Exception("Bad Request");
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == "Not Found")
+                {
+                    return NotFound("Something went wrong. Command is probably null");
+                }
+                else if (ex.Message == "Bad Request")
+                {
+                    return BadRequest("Something went wrong. Plese check you request.");
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError);
+                }
+            }
             return Ok(await mediator.Send(command));
         }
 
@@ -27,34 +54,164 @@ namespace Teryt.WebApi.Controllers
         [Route("/DajRynki")]
         public async Task<IActionResult> GetMarketSquaresInCounty(GetMarketSquaresInCountyByIdCommand command)
         {
+            try
+            {
+                if (command is null)
+                {
+                    throw new Exception("Not Found");
+                }
+                else if (command.GetType() != typeof(GetMarketSquaresInCountyByIdCommand))
+                {
+                    throw new Exception("Bad Request");
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == "Not Found")
+                {
+                    return NotFound("Something went wrong. Command is probably null");
+                }
+                else if (ex.Message == "Bad Request")
+                {
+                    return BadRequest("Something went wrong. Plese check you request.");
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError);
+                }
+            }
             return Ok(await mediator.Send(command));
         }
 
         [HttpPost]
         [Route("/DajUliceWMiescie")]
-        public async Task<IActionResult>GetStreetsInCityById(GetStreetsInCityByIdCommand command)
+        public async Task<IActionResult> GetStreetsInCityById(GetStreetsInCityByIdCommand command)
         {
+            try
+            {
+                if (command is null)
+                {
+                    throw new Exception("Not Found");
+                }
+                else if (command.GetType() != typeof(GetStreetsInCityByIdCommand))
+                {
+                    throw new Exception("Bad Request");
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == "Not Found")
+                {
+                    return NotFound("Something went wrong. Command is probably null");
+                }
+                else if (ex.Message == "Bad Request")
+                {
+                    return BadRequest("Something went wrong. Plese check you request.");
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError);
+                }
+            }
             return Ok(await mediator.Send(command));
         }
 
         [HttpPost]
         [Route("/DajDrogi")]
-        public async Task<IActionResult>GetAllPathsInPoland(GetPathsCommand command)
+        public async Task<IActionResult> GetAllPathsInPoland(GetPathsCommand command)
         {
+            try
+            {
+                if (command is null)
+                {
+                    throw new Exception("Not Found");
+                }
+                else if (command.GetType() != typeof(GetPathsCommand))
+                {
+                    throw new Exception("Bad Request");
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == "Not Found")
+                {
+                    return NotFound("Something went wrong. Command is probably null");
+                }
+                else if (ex.Message == "Bad Request")
+                {
+                    return BadRequest("Something went wrong. Plese check you request.");
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError);
+                }
+            }
             return Ok(await mediator.Send(command));
         }
 
         [HttpPost]
         [Route("/DajMostyWWojewodztwie")]
-        public async Task<IActionResult>GetBridgesInVoivodeshipById(GetBridgesInVoivodeshipByIdCommand command)
+        public async Task<IActionResult> GetBridgesInVoivodeshipById(GetBridgesInVoivodeshipByIdCommand command)
         {
+            try
+            {
+                if (command is null)
+                {
+                    throw new Exception("Not Found");
+                }
+                else if (command.GetType() != typeof(GetBridgesInVoivodeshipByIdCommand))
+                {
+                    throw new Exception("Bad Request");
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == "Not Found")
+                {
+                    return NotFound("Something went wrong. Command is probably null");
+                }
+                else if (ex.Message == "Bad Request")
+                {
+                    return BadRequest("Something went wrong. Plese check you request.");
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError);
+                }
+            }
             return Ok(await mediator.Send(command));
         }
 
         [HttpPost]
         [Route("/DajParkiWWojewodztwie")]
-        public async Task<IActionResult>GetAllParksInVoivodeshipById(GetParksInVoivodeshipByIdCommand command)
+        public async Task<IActionResult> GetAllParksInVoivodeshipById(GetParksInVoivodeshipByIdCommand command)
         {
+            try
+            {
+                if (command is null)
+                {
+                    throw new Exception("Not Found");
+                }
+                else if (command.GetType() != typeof(GetParksInVoivodeshipByIdCommand))
+                {
+                    throw new Exception("Bad Request");
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == "Not Found")
+                {
+                    return NotFound("Something went wrong. Command is probably null");
+                }
+                else if (ex.Message == "Bad Request")
+                {
+                    return BadRequest("Something went wrong. Plese check you request.");
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError);
+                }
+            }
             return Ok(await mediator.Send(command));
         }
     }
