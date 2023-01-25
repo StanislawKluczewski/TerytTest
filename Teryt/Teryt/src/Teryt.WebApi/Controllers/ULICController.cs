@@ -13,10 +13,25 @@ namespace Teryt.WebApi.Controllers
     {
         private readonly IMediator mediator;
         private ExceptionHandler exceptionHandler;
-        public ULICController(IMediator mediator)
+        private readonly ILogger<ULICController> logger;
+
+        public ULICController(IMediator mediator, ILogger<ULICController> logger)
         {
             this.mediator = mediator;
             this.exceptionHandler = new ExceptionHandler();
+            this.logger = logger;
+        }
+
+
+        [HttpGet]
+        [Route("/api/[controller]/logs")]
+        public IEnumerable<string> Get()
+        {
+            logger.LogDebug("This is a debug message");
+            logger.LogInformation("This is an info message");
+            logger.LogWarning("Thi is a warning message");
+            logger.LogError(new Exception(), "This is an error message");
+            return new string[] { };
         }
 
         [HttpPost]
