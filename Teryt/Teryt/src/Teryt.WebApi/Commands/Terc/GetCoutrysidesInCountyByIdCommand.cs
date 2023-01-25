@@ -4,9 +4,11 @@ using Teryt.WebApi.DTO.Response;
 
 namespace Teryt.WebApi.Commands.Terc
 {
-    public class GetCoutrysidesCommand : IRequest<IEnumerable<TERCDto>>
+    public class GetCoutrysidesInCountyByIdCommand : IRequest<IEnumerable<TERCDto>>
     {
-        public class GetCoutrysidesCommandHandler : IRequestHandler<GetCoutrysidesCommand, IEnumerable<TERCDto>>
+        public int WojewodztwoId { get; set; }
+        public int PowiatId { get; set; }
+        public class GetCoutrysidesCommandHandler : IRequestHandler<GetCoutrysidesInCountyByIdCommand, IEnumerable<TERCDto>>
         {
             private readonly DataContext dataContext;
 
@@ -15,10 +17,11 @@ namespace Teryt.WebApi.Commands.Terc
                 this.dataContext = dataContext;
             }
 
-            public async Task<IEnumerable<TERCDto>> Handle(GetCoutrysidesCommand request, CancellationToken cancellationToken)
+            public async Task<IEnumerable<TERCDto>> Handle(GetCoutrysidesInCountyByIdCommand request, CancellationToken cancellationToken)
             {
                 var result = from t in dataContext.TERCs
                              where t.RodzGminaId == 5
+                             && t.WojewodztwoId == request.WojewodztwoId && t.PowiatId == request.PowiatId
                              select new TERCDto
                              {
                                  WojewodztwoId = t.WojewodztwoId,
