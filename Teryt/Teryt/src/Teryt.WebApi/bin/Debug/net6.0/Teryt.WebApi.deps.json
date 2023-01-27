@@ -15,6 +15,9 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.1",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.1",
           "NLog": "5.1.1",
+          "NLog.Database": "5.1.1",
+          "NLog.Extensions.Logging": "5.2.1",
+          "NLog.Schema": "5.1.1",
           "NLog.Web.AspNetCore": "5.2.1",
           "Swashbuckle.AspNetCore": "6.4.0",
           "System.Data.SqlClient": "4.8.5"
@@ -503,6 +506,17 @@
           }
         }
       },
+      "NLog.Database/5.1.1": {
+        "dependencies": {
+          "NLog": "5.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.Database.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.1.1.1522"
+          }
+        }
+      },
       "NLog.Extensions.Logging/5.2.1": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
@@ -516,6 +530,7 @@
           }
         }
       },
+      "NLog.Schema/5.1.1": {},
       "NLog.Web.AspNetCore/5.2.1": {
         "dependencies": {
           "NLog.Extensions.Logging": "5.2.1"
@@ -1193,12 +1208,26 @@
       "path": "nlog/5.1.1",
       "hashPath": "nlog.5.1.1.nupkg.sha512"
     },
+    "NLog.Database/5.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dNbYVAfrwQuj1oTtMS6JPA2Nn8ibPsno58gDUWGIXTQnfyyD+PO+b27Qs+vL0rk7Ga3N+z40D0hHRf2hfvjBsg==",
+      "path": "nlog.database/5.1.1",
+      "hashPath": "nlog.database.5.1.1.nupkg.sha512"
+    },
     "NLog.Extensions.Logging/5.2.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-b16cdOklZ3gfeuiyewsAmR2It/55Ar+plwsyo7CjgfwZtH1c5B2ZyYIGt1Ho+fPMOKEHkPU/trXZqAg9Oipiiw==",
       "path": "nlog.extensions.logging/5.2.1",
       "hashPath": "nlog.extensions.logging.5.2.1.nupkg.sha512"
+    },
+    "NLog.Schema/5.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TjOwD8X4YHQz60AIlxXKsIikw8HBeueaN73Ito6eai3j2YmxGTJsSdWR4Z0j1PZCAHrV5CRLLERRs7VVPXEBRA==",
+      "path": "nlog.schema/5.1.1",
+      "hashPath": "nlog.schema.5.1.1.nupkg.sha512"
     },
     "NLog.Web.AspNetCore/5.2.1": {
       "type": "package",

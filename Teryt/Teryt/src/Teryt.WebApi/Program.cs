@@ -3,8 +3,8 @@ using MediatR;
 using NLog;
 using NLog.Web;
 using System.Reflection;
+using Teryt.WebApi.Controllers;
 using Teryt.WebApi.Data;
-
 
 var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
 
@@ -18,7 +18,6 @@ try
     builder.Services.AddSwaggerGen();
     builder.Services.AddDbContext<DataContext>();
     builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
-
     builder.Logging.ClearProviders();
     builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
     builder.Host.UseNLog();
