@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aiEtbR+IPBwXYZeh4debmZkU5ZUVDJmTwz8AbZpxUsh4sjWkmH8Jfyav6AHGHHKnji06jpS1uVQ62qu2ceVOag==",
+  "dgSpecHash": "r/BQwqacdWlzer+o/BivwAt9S2jCOqoGGkx233hDhrNC0lHyGBi8Ql1289yRwkbZAfSWaV3eeOIbYd6tPergMA==",
   "success": true,
   "projectFilePath": "C:\\Users\\klucz\\OneDrive\\Pulpit\\Stasiu\\Github\\Teryt\\Teryt\\Teryt\\src\\Teryt.WebApi\\Teryt.WebApi.csproj",
   "expectedPackageFiles": [
@@ -48,7 +48,9 @@
     "C:\\Users\\klucz\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\klucz\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\klucz\\.nuget\\packages\\nlog\\5.1.1\\nlog.5.1.1.nupkg.sha512",
+    "C:\\Users\\klucz\\.nuget\\packages\\nlog.database\\5.1.1\\nlog.database.5.1.1.nupkg.sha512",
     "C:\\Users\\klucz\\.nuget\\packages\\nlog.extensions.logging\\5.2.1\\nlog.extensions.logging.5.2.1.nupkg.sha512",
+    "C:\\Users\\klucz\\.nuget\\packages\\nlog.schema\\5.1.1\\nlog.schema.5.1.1.nupkg.sha512",
     "C:\\Users\\klucz\\.nuget\\packages\\nlog.web.aspnetcore\\5.2.1\\nlog.web.aspnetcore.5.2.1.nupkg.sha512",
     "C:\\Users\\klucz\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\klucz\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

@@ -745,6 +745,22 @@
           }
         }
       },
+      "NLog.Database/5.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NLog": "5.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NLog.Database.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.Database.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "NLog.Extensions.Logging/5.2.1": {
         "type": "package",
         "dependencies": {
@@ -760,6 +776,16 @@
         "runtime": {
           "lib/net6.0/NLog.Extensions.Logging.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "NLog.Schema/5.1.1": {
+        "type": "package",
+        "contentFiles": {
+          "contentFiles/any/any/NLog.xsd": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
           }
         }
       },
@@ -2686,6 +2712,30 @@
         "nlog.nuspec"
       ]
     },
+    "NLog.Database/5.1.1": {
+      "sha512": "dNbYVAfrwQuj1oTtMS6JPA2Nn8ibPsno58gDUWGIXTQnfyyD+PO+b27Qs+vL0rk7Ga3N+z40D0hHRf2hfvjBsg==",
+      "type": "package",
+      "path": "nlog.database/5.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "N.png",
+        "lib/net35/NLog.Database.dll",
+        "lib/net35/NLog.Database.xml",
+        "lib/net45/NLog.Database.dll",
+        "lib/net45/NLog.Database.xml",
+        "lib/net46/NLog.Database.dll",
+        "lib/net46/NLog.Database.xml",
+        "lib/netstandard1.3/NLog.Database.dll",
+        "lib/netstandard1.3/NLog.Database.xml",
+        "lib/netstandard1.5/NLog.Database.dll",
+        "lib/netstandard1.5/NLog.Database.xml",
+        "lib/netstandard2.0/NLog.Database.dll",
+        "lib/netstandard2.0/NLog.Database.xml",
+        "nlog.database.5.1.1.nupkg.sha512",
+        "nlog.database.nuspec"
+      ]
+    },
     "NLog.Extensions.Logging/5.2.1": {
       "sha512": "b16cdOklZ3gfeuiyewsAmR2It/55Ar+plwsyo7CjgfwZtH1c5B2ZyYIGt1Ho+fPMOKEHkPU/trXZqAg9Oipiiw==",
       "type": "package",
@@ -2708,6 +2758,19 @@
         "lib/netstandard2.1/NLog.Extensions.Logging.xml",
         "nlog.extensions.logging.5.2.1.nupkg.sha512",
         "nlog.extensions.logging.nuspec"
+      ]
+    },
+    "NLog.Schema/5.1.1": {
+      "sha512": "TjOwD8X4YHQz60AIlxXKsIikw8HBeueaN73Ito6eai3j2YmxGTJsSdWR4Z0j1PZCAHrV5CRLLERRs7VVPXEBRA==",
+      "type": "package",
+      "path": "nlog.schema/5.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/NLog.xsd",
+        "contentFiles/any/any/NLog.xsd",
+        "nlog.schema.5.1.1.nupkg.sha512",
+        "nlog.schema.nuspec"
       ]
     },
     "NLog.Web.AspNetCore/5.2.1": {
@@ -4345,6 +4408,9 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.1",
       "NLog >= 5.1.1",
+      "NLog.Database >= 5.1.1",
+      "NLog.Extensions.Logging >= 5.2.1",
+      "NLog.Schema >= 5.1.1",
       "NLog.Web.AspNetCore >= 5.2.1",
       "Swashbuckle.AspNetCore >= 6.4.0",
       "System.Data.SqlClient >= 4.8.5"
@@ -4423,6 +4489,18 @@
             "version": "[7.0.1, )"
           },
           "NLog": {
+            "target": "Package",
+            "version": "[5.1.1, )"
+          },
+          "NLog.Database": {
+            "target": "Package",
+            "version": "[5.1.1, )"
+          },
+          "NLog.Extensions.Logging": {
+            "target": "Package",
+            "version": "[5.2.1, )"
+          },
+          "NLog.Schema": {
             "target": "Package",
             "version": "[5.1.1, )"
           },

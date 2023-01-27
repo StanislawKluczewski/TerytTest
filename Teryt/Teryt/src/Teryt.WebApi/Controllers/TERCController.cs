@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Teryt.WebApi.Commands.Terc;
-using Teryt.WebApi.Helpers;
+
 
 namespace Teryt.WebApi.Controllers
 {
@@ -12,42 +12,43 @@ namespace Teryt.WebApi.Controllers
     public class TERCController : ControllerBase
     {
         private readonly IMediator mediator;
-        private ExceptionHandler exceptionHandler;
-        private readonly ILogger<SIMCController> logger;
-        public TERCController(IMediator mediator, ILogger<SIMCController> logger)
+        private readonly ILogger<TERCController> logger;
+        public TERCController(IMediator mediator, ILogger<TERCController> logger)
         {
             this.mediator = mediator;
-            this.exceptionHandler = new ExceptionHandler();
             this.logger = logger;
-        }
-
-        [HttpGet]
-        [Route("/api/[controller]/logs")]
-        public IEnumerable<string> Get()
-        {
-            logger.LogDebug("This is a debug message");
-            logger.LogInformation("This is an info message");
-            logger.LogWarning("Thi is a warning message");
-            logger.LogError(new Exception(), "This is an error message");
-            return new string[] { };
         }
 
         [HttpPost]
         [Route("/DajWojewodztwa")]
         public async Task<IActionResult> GetAllVoivodeships(GetVoivodeshipsCommand command)
         {
-            var result = exceptionHandler.GetException(command, typeof(GetVoivodeshipsCommand));
-            if (result == 404)
+            try
             {
-                return NotFound("Something went wrong. Command is probably null");
+                if (command is null)
+                {
+                    throw new Exception("Not Found");
+                }
+                else if (command.GetType() != typeof(GetVoivodeshipsCommand))
+                {
+                    throw new Exception("Bad Request");
+                }
             }
-            else if (result == 400)
+            catch (Exception ex)
             {
-                return BadRequest("Something went wrong. Yours typeof command class is not GetVoivodeshipsCommand type. Plese check you request.");
-            }
-            else if (result == 500)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                this.logger.LogError(new Exception(), ex.ToString());
+                if (ex.Message == "Not Found")
+                {
+                    return NotFound("Something went wrong. Command is probably null");
+                }
+                else if (ex.Message == "Bad Request")
+                {
+                    return BadRequest("Something went wrong. Yours typeof command class is not GetVoivodeshipsCommand type. Plese check you request.");
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError);
+                }
             }
             return Ok(await mediator.Send(command));
         }
@@ -56,38 +57,67 @@ namespace Teryt.WebApi.Controllers
         [Route("/DajWojewodztwo")]
         public async Task<IActionResult> GetVoivodeshipById(GetVoivodeshipByIdCommand command)
         {
-            var result = exceptionHandler.GetException(command, typeof(GetVoivodeshipByIdCommand));
-            if (result == 404)
+            try
             {
-                return NotFound("Something went wrong. Command is probably null");
+                if (command is null)
+                {
+                    throw new Exception("Not Found");
+                }
+                else if (command.GetType() != typeof(GetVoivodeshipByIdCommand))
+                {
+                    throw new Exception("Bad Request");
+                }
             }
-            else if (result == 400)
+            catch (Exception ex)
             {
-                return BadRequest("Something went wrong. Yours typeof command class is not GetVoivodeshipByIdCommand type. Plese check you request.");
-            }
-            else if (result == 500)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                this.logger.LogError(new Exception(), ex.ToString());
+                if (ex.Message == "Not Found")
+                {
+                    return NotFound("Something went wrong. Command is probably null");
+                }
+                else if (ex.Message == "Bad Request")
+                {
+                    return BadRequest("Something went wrong. Yours typeof command class is not GetVoivodeshipByIdCommand type. Plese check you request.");
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError);
+                }
             }
             return Ok(await mediator.Send(command));
+
         }
 
         [HttpPost]
         [Route("/DajMiastaWojewodztwie")]
         public async Task<IActionResult> GetAllCitiesInVoivodeshipById(GetCititesInVoivodeshipByIdCommand command)
         {
-            var result = exceptionHandler.GetException(command, typeof(GetCititesInVoivodeshipByIdCommand));
-            if (result == 404)
+            try
             {
-                return NotFound("Something went wrong. Command is probably null");
+                if (command is null)
+                {
+                    throw new Exception("Not Found");
+                }
+                else if (command.GetType() != typeof(GetCititesInVoivodeshipByIdCommand))
+                {
+                    throw new Exception("Bad Request");
+                }
             }
-            else if (result == 400)
+            catch (Exception ex)
             {
-                return BadRequest("Something went wrong. Yours typeof command class is not GetCititesInVoivodeshipByIdCommand type. Plese check you request.");
-            }
-            else if (result == 500)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                this.logger.LogError(new Exception(), ex.ToString());
+                if (ex.Message == "Not Found")
+                {
+                    return NotFound("Something went wrong. Command is probably null");
+                }
+                else if (ex.Message == "Bad Request")
+                {
+                    return BadRequest("Something went wrong. Yours typeof command class is not GetCititesInVoivodeshipByIdCommand type. Plese check you request.");
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError);
+                }
             }
             return Ok(await mediator.Send(command));
         }
@@ -96,18 +126,32 @@ namespace Teryt.WebApi.Controllers
         [Route("/DajPowiatyWWojewodztwie")]
         public async Task<IActionResult> GetCountiesInVoivodeshipById(GetCountiesInVoivodeshipByIdCommand command)
         {
-            var result = exceptionHandler.GetException(command, typeof(GetCountiesInVoivodeshipByIdCommand));
-            if (result == 404)
+            try
             {
-                return NotFound("Something went wrong. Command is probably null");
+                if (command is null)
+                {
+                    throw new Exception("Not Found");
+                }
+                else if (command.GetType() != typeof(GetCountiesInVoivodeshipByIdCommand))
+                {
+                    throw new Exception("Bad Request");
+                }
             }
-            else if (result == 400)
+            catch (Exception ex)
             {
-                return BadRequest("Something went wrong. Yours typeof command class is not GetCountiesInVoivodeshipByIdCommand type. Plese check you request.");
-            }
-            else if (result == 500)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                this.logger.LogError(new Exception(), ex.ToString());
+                if (ex.Message == "Not Found")
+                {
+                    return NotFound("Something went wrong. Command is probably null");
+                }
+                else if (ex.Message == "Bad Request")
+                {
+                    return BadRequest("Something went wrong. Yours typeof command class is not GetCountiesInVoivodeshipByIdCommand type. Plese check you request.");
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError);
+                }
             }
             return Ok(await mediator.Send(command));
         }
@@ -116,18 +160,32 @@ namespace Teryt.WebApi.Controllers
         [Route("/DajPowiat")]
         public async Task<IActionResult> GetCountyById(GetCountyByIdCommand command)
         {
-            var result = exceptionHandler.GetException(command, typeof(GetCountyByIdCommand));
-            if (result == 404)
+            try
             {
-                return NotFound("Something went wrong. Command is probably null");
+                if (command is null)
+                {
+                    throw new Exception("Not Found");
+                }
+                else if (command.GetType() != typeof(GetCountyByIdCommand))
+                {
+                    throw new Exception("Bad Request");
+                }
             }
-            else if (result == 400)
+            catch (Exception ex)
             {
-                return BadRequest("Something went wrong. Yours typeof command class is not GetCountyByIdCommand type. Plese check you request.");
-            }
-            else if (result == 500)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                this.logger.LogError(new Exception(), ex.ToString());
+                if (ex.Message == "Not Found")
+                {
+                    return NotFound("Something went wrong. Command is probably null");
+                }
+                else if (ex.Message == "Bad Request")
+                {
+                    return BadRequest("Something went wrong. Yours typeof command class is not GetCountyByIdCommand type. Plese check you request.");
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError);
+                }
             }
             return Ok(await mediator.Send(command));
         }
@@ -136,18 +194,32 @@ namespace Teryt.WebApi.Controllers
         [Route("/DajGminy")]
         public async Task<IActionResult> GetDistrictsById(GetDistrictsByIdCommand command)
         {
-            var result = exceptionHandler.GetException(command, typeof(GetDistrictsByIdCommand));
-            if (result == 404)
+            try
             {
-                return NotFound("Something went wrong. Command is probably null");
+                if (command is null)
+                {
+                    throw new Exception("Not Found");
+                }
+                else if (command.GetType() != typeof(GetDistrictsByIdCommand))
+                {
+                    throw new Exception("Bad Request");
+                }
             }
-            else if (result == 400)
+            catch (Exception ex)
             {
-                return BadRequest("Something went wrong. Yours typeof command class is not GetDistrictsByIdCommand type. Plese check you request.");
-            }
-            else if (result == 500)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                this.logger.LogError(new Exception(), ex.ToString());
+                if (ex.Message == "Not Found")
+                {
+                    return NotFound("Something went wrong. Command is probably null");
+                }
+                else if (ex.Message == "Bad Request")
+                {
+                    return BadRequest("Something went wrong. Yours typeof command class is not GetDistrictsByIdCommand type. Plese check you request.");
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError);
+                }
             }
             return Ok(await mediator.Send(command));
         }
@@ -156,18 +228,32 @@ namespace Teryt.WebApi.Controllers
         [Route("/DajDelegaturyDzielnice")]
         public async Task<IActionResult> GetDeleganciesAndQuarters(GetDeleganciesAndQuartersCommand command)
         {
-            var result = exceptionHandler.GetException(command, typeof(GetDeleganciesAndQuartersCommand));
-            if (result == 404)
+            try
             {
-                return NotFound("Something went wrong. Command is probably null");
+                if (command is null)
+                {
+                    throw new Exception("Not Found");
+                }
+                else if (command.GetType() != typeof(GetDeleganciesAndQuartersCommand))
+                {
+                    throw new Exception("Bad Request");
+                }
             }
-            else if (result == 400)
+            catch (Exception ex)
             {
-                return BadRequest("Something went wrong. Yours typeof command class is not GetDeleganciesAndQuartersCommand type. Plese check you request.");
-            }
-            else if (result == 500)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                this.logger.LogError(new Exception(), ex.ToString());
+                if (ex.Message == "Not Found")
+                {
+                    return NotFound("Something went wrong. Command is probably null");
+                }
+                else if (ex.Message == "Bad Request")
+                {
+                    return BadRequest("Something went wrong. Yours typeof command class is not GetDeleganciesAndQuartersCommand type. Plese check you request.");
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError);
+                }
             }
             return Ok(await mediator.Send(command));
         }
@@ -176,18 +262,32 @@ namespace Teryt.WebApi.Controllers
         [Route("/DajTerenyWiejskieWPowiecie")]
         public async Task<IActionResult> GetCountrysides(GetCoutrysidesInCountyByIdCommand command)
         {
-            var result = exceptionHandler.GetException(command, typeof(GetCoutrysidesInCountyByIdCommand));
-            if (result == 404)
+            try
             {
-                return NotFound("Something went wrong. Command is probably null");
+                if (command is null)
+                {
+                    throw new Exception("Not Found");
+                }
+                else if (command.GetType() != typeof(GetCoutrysidesInCountyByIdCommand))
+                {
+                    throw new Exception("Bad Request");
+                }
             }
-            else if (result == 400)
+            catch (Exception ex)
             {
-                return BadRequest("Something went wrong. Yours typeof command class is not GetCoutrysidesCommand type. Plese check you request.");
-            }
-            else if (result == 500)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                this.logger.LogError(new Exception(), ex.ToString());
+                if (ex.Message == "Not Found")
+                {
+                    return NotFound("Something went wrong. Command is probably null");
+                }
+                else if (ex.Message == "Bad Request")
+                {
+                    return BadRequest("Something went wrong. Yours typeof command class is not GetCoutrysidesInCountyByIdCommand type. Plese check you request.");
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError);
+                }
             }
             return Ok(await mediator.Send(command));
         }
