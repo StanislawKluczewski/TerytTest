@@ -36,7 +36,7 @@ namespace Teryt.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                this.logger.LogError(new Exception(), ex.ToString());
+                logger.LogError(ex.ToString());
                 if (ex.Message == "Not Found")
                 {
                     return NotFound("Something went wrong. Command is probably null");
@@ -70,7 +70,7 @@ namespace Teryt.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                this.logger.LogError(new Exception(), ex.ToString());
+                logger.LogError(ex.ToString());
                 if (ex.Message == "Not Found")
                 {
                     return NotFound("Something went wrong. Command is probably null");
@@ -105,7 +105,7 @@ namespace Teryt.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                this.logger.LogError(new Exception(), ex.ToString());
+                logger.LogError(ex.ToString());
                 if (ex.Message == "Not Found")
                 {
                     return NotFound("Something went wrong. Command is probably null");
@@ -139,7 +139,7 @@ namespace Teryt.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                this.logger.LogError(new Exception(), ex.ToString());
+                logger.LogError(ex.ToString());
                 if (ex.Message == "Not Found")
                 {
                     return NotFound("Something went wrong. Command is probably null");
@@ -173,7 +173,7 @@ namespace Teryt.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                this.logger.LogError(new Exception(), ex.ToString());
+                logger.LogError(ex.ToString());
                 if (ex.Message == "Not Found")
                 {
                     return NotFound("Something went wrong. Command is probably null");
@@ -207,7 +207,7 @@ namespace Teryt.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                this.logger.LogError(new Exception(), ex.ToString());
+                logger.LogError(ex.ToString());
                 if (ex.Message == "Not Found")
                 {
                     return NotFound("Something went wrong. Command is probably null");
@@ -241,7 +241,7 @@ namespace Teryt.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                this.logger.LogError(new Exception(), ex.ToString());
+                logger.LogError(ex.ToString());
                 if (ex.Message == "Not Found")
                 {
                     return NotFound("Something went wrong. Command is probably null");
@@ -275,7 +275,7 @@ namespace Teryt.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                this.logger.LogError(new Exception(), ex.ToString());
+                logger.LogError(ex.ToString());
                 if (ex.Message == "Not Found")
                 {
                     return NotFound("Something went wrong. Command is probably null");
