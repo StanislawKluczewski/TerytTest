@@ -3,13 +3,13 @@ using MediatR;
 using NLog;
 using NLog.Web;
 using System.Reflection;
-using Teryt.WebApi.Controllers;
 using Teryt.WebApi.Data;
 
 var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
 
 try
 {
+    logger.Debug("Init-Start");
     var builder = WebApplication.CreateBuilder(args);
     // Add services to the container.
     builder.Services.AddControllers();

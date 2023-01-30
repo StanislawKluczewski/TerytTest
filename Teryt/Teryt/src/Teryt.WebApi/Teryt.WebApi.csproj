@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="nlog.config" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="C:\Users\klucz\.nuget\packages\nlog.config\4.7.15\contentFiles\any\any\NLog.config" />
     <None Remove="C:\Users\klucz\.nuget\packages\nlog.schema\5.1.1\contentFiles\any\any\NLog.xsd" />
   </ItemGroup>
@@ -41,10 +37,6 @@
     <Folder Include="Queries\Simc\" />
     <Folder Include="Queries\Terc\" />
     <Folder Include="Queries\Ulic\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="nlog.config" />
   </ItemGroup>
 
 </Project>

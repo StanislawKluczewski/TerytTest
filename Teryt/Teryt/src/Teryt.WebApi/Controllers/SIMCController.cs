@@ -1,8 +1,10 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Teryt.WebApi.Commands.Simc;
 using Teryt.WebApi.Commands.Terc;
+using Teryt.WebApi.Data;
 
 namespace Teryt.WebApi.Controllers
 {
@@ -12,10 +14,12 @@ namespace Teryt.WebApi.Controllers
     {
         private readonly IMediator mediator;
         private readonly ILogger<SIMCController> logger;
-        public SIMCController(IMediator mediator, ILogger<SIMCController> logger)
+        private DataContext dataContext;
+        public SIMCController(IMediator mediator, ILogger<SIMCController> logger, DataContext dataContext)
         {
             this.mediator = mediator;
             this.logger = logger;
+            this.dataContext = dataContext;
         }
 
 
@@ -36,7 +40,7 @@ namespace Teryt.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                this.logger.LogError(new Exception(), ex.ToString());
+                logger.LogError(ex.ToString());
                 if (ex.Message == "Not Found")
                 {
                     return NotFound("Something went wrong. Command is probably null");
@@ -70,7 +74,7 @@ namespace Teryt.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                this.logger.LogError(new Exception(), ex.ToString());
+                logger.LogError(ex.ToString());
                 if (ex.Message == "Not Found")
                 {
                     return NotFound("Something went wrong. Command is probably null");
@@ -104,7 +108,7 @@ namespace Teryt.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                this.logger.LogError(new Exception(), ex.ToString());
+                logger.LogError(ex.ToString());
                 if (ex.Message == "Not Found")
                 {
                     return NotFound("Something went wrong. Command is probably null");
@@ -138,7 +142,7 @@ namespace Teryt.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                this.logger.LogError(new Exception(), ex.ToString());
+                logger.LogError(ex.ToString());
                 if (ex.Message == "Not Found")
                 {
                     return NotFound("Something went wrong. Command is probably null");
@@ -172,7 +176,7 @@ namespace Teryt.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                this.logger.LogError(new Exception(), ex.ToString());
+                logger.LogError(ex.ToString());
                 if (ex.Message == "Not Found")
                 {
                     return NotFound("Something went wrong. Command is probably null");
@@ -206,7 +210,7 @@ namespace Teryt.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                this.logger.LogError(new Exception(), ex.ToString());
+                logger.LogError(ex.ToString());
                 if (ex.Message == "Not Found")
                 {
                     return NotFound("Something went wrong. Command is probably null");
@@ -240,7 +244,7 @@ namespace Teryt.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                this.logger.LogError(new Exception(), ex.ToString());
+                logger.LogError(ex.ToString());
                 if (ex.Message == "Not Found")
                 {
                     return NotFound("Something went wrong. Command is probably null");
@@ -274,7 +278,7 @@ namespace Teryt.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                this.logger.LogError(new Exception(), ex.ToString());
+                logger.LogError(ex.ToString());
                 if (ex.Message == "Not Found")
                 {
                     return NotFound("Something went wrong. Command is probably null");
@@ -308,7 +312,7 @@ namespace Teryt.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                this.logger.LogError(new Exception(), ex.ToString());
+                logger.LogError(ex.ToString());
                 if (ex.Message == "Not Found")
                 {
                     return NotFound("Something went wrong. Command is probably null");
