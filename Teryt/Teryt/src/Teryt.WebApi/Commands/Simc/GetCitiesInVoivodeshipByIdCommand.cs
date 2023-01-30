@@ -31,7 +31,7 @@ namespace Teryt.WebApi.Commands.Simc
                                  RodzGminaId = c.RodzGminaId,
                                  StanNa = c.StanNa
                              };
-                return result;
+                return await Task.FromResult(result);
             }
         }
     }

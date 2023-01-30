@@ -6,7 +6,7 @@ namespace Teryt.WebApi.Commands.Simc
 {
     public class GetDeleganciesByIdCommand : IRequest<IEnumerable<SIMCDto>>
     {
-        public int Id { get; set; }
+        public int WojewodztwoId { get; set; }
         public class GetDeleganciesOfCityByNameCommandHandler : IRequestHandler<GetDeleganciesByIdCommand, IEnumerable<SIMCDto>>
         {
             private readonly DataContext dataContext;
@@ -21,9 +21,8 @@ namespace Teryt.WebApi.Commands.Simc
                 var result = from s in dataContext.SIMCs
                              join t in dataContext.TERCs
                              on s.WojewodztwoId equals t.WojewodztwoId
-                             where t.NazwaTerytorialna == "delegatura" && s.RmNumer == 98
-                             && t.PowiatId == s.PowiatId
-                             && t.WojewodztwoId == request.Id
+                             where t.WojewodztwoId == request.WojewodztwoId &&
+                             t.NazwaTerytorialna == "delegatura" && s.RmNumer == 98
                              select new SIMCDto
                              {
                                  Nazwa = s.Nazwa,
@@ -33,7 +32,7 @@ namespace Teryt.WebApi.Commands.Simc
                                  RodzGminaId = s.RodzGminaId,
                                  StanNa = s.StanNa
                              };
-                return result.Distinct();
+                return await Task.FromResult(result.Distinct());
             }
         }
     }

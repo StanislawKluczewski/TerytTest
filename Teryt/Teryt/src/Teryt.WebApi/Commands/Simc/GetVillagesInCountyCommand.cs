@@ -34,7 +34,7 @@ namespace Teryt.WebApi.Commands.Simc
                                  StanNa = s.StanNa
                              };
 
-                return result;
+                return await Task.FromResult(result);
             }
         }
     }

@@ -25,9 +25,8 @@ namespace Teryt.WebApi.Commands.Ulic
                              join s in dataContext.SIMCs
                              on u.WojewodztwoId equals s.WojewodztwoId
                              where u.WojewodztwoId == request.WojewodztwoId
-                             && s.WojewodztwoId == request.WojewodztwoId
                              && u.PowiatId == request.PowiatId && u.GminaId == request.GminaId
-                             && s.PowiatId == request.PowiatId && s.GminaId == request.GminaId
+                             && s.PowiatId == u.PowiatId && s.GminaId == s.GminaId
                              && u.RodzGminaId == 4 && s.RodzGminaId == 4
                              && s.RmNumer == 99 && u.Cecha.Contains("ul.")
                              select new ULICDto
@@ -38,10 +37,9 @@ namespace Teryt.WebApi.Commands.Ulic
                                  Cecha = u.Cecha,
                                  Nazwa1 = u.Nazwa1,
                                  Nazwa2 = u.Nazwa2,
-                                 StanNa = u.StanNa,
-                                 NazwaSimc = s.Nazwa
+                                 StanNa = u.StanNa
                              };
-                return result;
+                return await Task.FromResult(result);
             }
         }
     }

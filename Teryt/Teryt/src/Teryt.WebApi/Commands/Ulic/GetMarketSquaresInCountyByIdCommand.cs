@@ -33,7 +33,7 @@ namespace Teryt.WebApi.Commands.Ulic
                                  Nazwa2 = r.Nazwa2,
                                  StanNa = r.StanNa
                              };
-                return result;
+                return await Task.FromResult(result);
             }
         }
     }

@@ -41,16 +41,22 @@ You can develop and change the code in a very real sense.
   POST /api/TERC/DajWojewodztwo
 ```
 
-##### Get all cities
+##### Get all cities in voivodeship by id
 
 ```http
-  POST /api/TERC/DajMiasta
+  POST /api/TERC/DajMiastaWWojewodztwie
 ```
 
-##### Get all counties
+##### Get all counties in voivodeship by id
 
 ```http
-  POST /api/TERC/DajPowiaty
+  POST /api/TERC/DajPowiatyWWojewodztwie
+```
+
+##### Get county by id
+
+```http
+  POST /api/TERC/DajPowiat
 ```
 
 ##### Get all Districts

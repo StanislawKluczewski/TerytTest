@@ -29,7 +29,7 @@ namespace Teryt.WebApi.Commands.Terc
                                  WojewodztwoId = request.Id,
                                  StanNa = v.StanNa
                              };
-                return result;
+                return await Task.FromResult(result);
             }
         }
     }
