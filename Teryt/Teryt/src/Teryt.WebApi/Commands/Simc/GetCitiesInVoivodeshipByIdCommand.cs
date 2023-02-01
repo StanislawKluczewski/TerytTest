@@ -6,7 +6,7 @@ namespace Teryt.WebApi.Commands.Simc
 {
     public class GetCitiesInVoivodeshipByIdCommand : IRequest<IEnumerable<SIMCDto>>
     {
-        public int Id { get; set; }
+        public int WojewodztwoId { get; set; }
         public class GetCityByNameCommandHandler : IRequestHandler<GetCitiesInVoivodeshipByIdCommand, IEnumerable<SIMCDto>>
         {
             private readonly DataContext context;
@@ -20,7 +20,7 @@ namespace Teryt.WebApi.Commands.Simc
                 var result = from c in context.SIMCs
                              where (c.SymNumer == c.SymPod && c.RmNumer == 96)
                              && (c.RodzGminaId == 4 || c.RodzGminaId == 1) &&
-                             c.WojewodztwoId == request.Id
+                             c.WojewodztwoId == request.WojewodztwoId
                              orderby c.Nazwa
                              select new SIMCDto
                              {
