@@ -7,7 +7,6 @@ using Teryt.WebApi.Commands.Terc;
 
 namespace Teryt.WebApi.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     public class TERCController : ControllerBase
     {
@@ -20,7 +19,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajWojewodztwa")]
+        [Route("api/[controller]/DajWojewodztwa")]
         public async Task<IActionResult> GetAllVoivodeships(GetVoivodeshipsCommand command)
         {
             try
@@ -54,7 +53,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajWojewodztwo")]
+        [Route("api/[controller]/DajWojewodztwo")]
         public async Task<IActionResult> GetVoivodeshipById(GetVoivodeshipByIdCommand command)
         {
             try
@@ -89,7 +88,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajMiastaWojewodztwie")]
+        [Route("api/[controller]/DajMiastaWojewodztwie")]
         public async Task<IActionResult> GetAllCitiesInVoivodeshipById(GetCititesInVoivodeshipByIdCommand command)
         {
             try
@@ -123,7 +122,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajPowiatyWWojewodztwie")]
+        [Route("api/[controller]/DajPowiatyWWojewodztwie")]
         public async Task<IActionResult> GetCountiesInVoivodeshipById(GetCountiesInVoivodeshipByIdCommand command)
         {
             try
@@ -157,7 +156,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajPowiat")]
+        [Route("api/[controller]/DajPowiat")]
         public async Task<IActionResult> GetCountyById(GetCountyByIdCommand command)
         {
             try
@@ -191,7 +190,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajGminy")]
+        [Route("api/[controller]/DajGminy")]
         public async Task<IActionResult> GetDistrictsById(GetDistrictsByIdCommand command)
         {
             try
@@ -225,7 +224,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajDelegaturyDzielnice")]
+        [Route("api/[controller]/DajDelegaturyDzielnice")]
         public async Task<IActionResult> GetDeleganciesAndQuarters(GetDeleganciesAndQuartersCommand command)
         {
             try
@@ -259,7 +258,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajTerenyWiejskieWPowiecie")]
+        [Route("api/[controller]/DajTerenyWiejskieWPowiecie")]
         public async Task<IActionResult> GetCountrysides(GetCoutrysidesInCountyByIdCommand command)
         {
             try

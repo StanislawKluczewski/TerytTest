@@ -7,7 +7,7 @@ namespace Teryt.WebApi.Commands.Terc
 {
     public class GetVoivodeshipByIdCommand : IRequest<IEnumerable<TERCDto>>
     {
-        public int Id { get; set; }
+        public int WojewodztwoId { get; set; }
         public class GetVoivodeshipByIdCommandHandler : IRequestHandler<GetVoivodeshipByIdCommand, IEnumerable<TERCDto>>
         {
             private readonly DataContext context;
@@ -21,12 +21,12 @@ namespace Teryt.WebApi.Commands.Terc
             {
                 var result = from v in context.TERCs
                              where (v.PowiatId == null && v.GminaId == null && v.RodzGminaId == null)
-                             && v.WojewodztwoId == request.Id
+                             && v.WojewodztwoId == request.WojewodztwoId
                              select new TERCDto
                              {
                                  Nazwa = v.Nazwa,
                                  NazwaTerytorialna = v.NazwaTerytorialna,
-                                 WojewodztwoId = request.Id,
+                                 WojewodztwoId = request.WojewodztwoId,
                                  StanNa = v.StanNa
                              };
                 return await Task.FromResult(result);

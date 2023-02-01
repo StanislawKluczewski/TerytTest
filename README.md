@@ -41,16 +41,22 @@ Docker 20.10.21
   POST /api/TERC/DajWojewodztwo
 ```
 
-##### Get all cities
+##### Get all cities in voivodeship by id
 
 ```http
-  POST /api/TERC/DajMiasta
+  POST /api/TERC/DajMiastaWWojewodztwie
 ```
 
-##### Get all counties
+##### Get all counties in voivodeship by id
 
 ```http
-  POST /api/TERC/DajPowiaty
+  POST /api/TERC/DajPowiatyWWojewodztwie
+```
+
+##### Get all county by id
+
+```http
+  POST /api/TERC/DajPowiat
 ```
 
 ##### Get all Districts
@@ -68,7 +74,7 @@ Docker 20.10.21
 ##### Get all Countrysides
 
 ```http
-  POST /api/TERC/DajTerenyWiejskie
+  POST /api/TERC/DajTerenyWiejskieWPowiecie
 ```
 
 ### SIMC
@@ -76,7 +82,7 @@ Docker 20.10.21
 ##### Get all cities
 
 ```http
-  POST /api/SIMC/Miasta
+  POST /api/SIMC/DajMiasta
 ```
 
 ##### Get city in voivodeship by id
@@ -135,7 +141,7 @@ Docker 20.10.21
   POST /api/ULIC/DajUliceWPowiecie
 ```
 
-##### Get market squares
+##### Get market squares in voivodeship by id
 
 ```http
   POST /api/ULIC/DajRynki
@@ -145,4 +151,28 @@ Docker 20.10.21
 
 ```http
   POST /api/ULIC/DajUliceWMiescie
+```
+
+##### Get the paths
+
+```http
+  POST /api/ULIC/DajDrogi
+```
+
+##### Get the bridges in voivodeship by id
+
+```http
+  POST /api/ULIC/DajDrogi
+```
+
+##### Get the parks in voivodeship by id
+
+```http
+  POST /api/ULIC/DajParkiWWojewodztwie
+```
+
+##### Get the parks in voivodeship by id
+
+```http
+  POST /api/ULIC/DajParkiWWojewodztwie
 ```

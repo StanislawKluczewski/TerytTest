@@ -8,7 +8,6 @@ using Teryt.WebApi.Data;
 
 namespace Teryt.WebApi.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     public class SIMCController : ControllerBase
     {
@@ -22,9 +21,8 @@ namespace Teryt.WebApi.Controllers
             this.dataContext = dataContext;
         }
 
-
         [HttpPost]
-        [Route("/Miasta")]
+        [Route("api/[controller]/DajMiasta")]
         public async Task<IActionResult> GetCitiesCommand(GetCitiesCommand command)
         {
             try
@@ -58,7 +56,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajMiastaWWojewodztwie")]
+        [Route("api/[controller]/DajMiastaWWojewodztwie")]
         public async Task<IActionResult> GetCityByNameCommand(GetCitiesInVoivodeshipByIdCommand command)
         {
             try
@@ -92,7 +90,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajWsieWPowiecie")]
+        [Route("api/[controller]/DajWsieWPowiecie")]
         public async Task<IActionResult> GetVillagesInCountyCommand(GetVillagesInCountyCommand command)
         {
             try
@@ -126,7 +124,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajDelegaturyMiast")]
+        [Route("api/[controller]/DajDelegaturyMiast")]
         public async Task<IActionResult> GetDeleganciesOfCityByName(GetDeleganciesByIdCommand command)
         {
             try
@@ -160,7 +158,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajCzesciMiejscowosci")]
+        [Route("api/[controller]/DajCzesciMiejscowosci")]
         public async Task<IActionResult> GetPartsOfLocalitiesById(GetPartsOfLocalitiesByIdCommand command)
         {
             try
@@ -194,7 +192,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajCaleWsie")]
+        [Route("api/[controller]/DajCaleWsie")]
         public async Task<IActionResult> GetVillagesById(GetWholeVillagesByIdCommand command)
         {
             try
@@ -228,7 +226,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajOsadyWPowiecie")]
+        [Route("api/[controller]/DajOsadyWPowiecie")]
         public async Task<IActionResult> GetSettlementsInCountyById(GetSettlementsInCountyByIdCommand command)
         {
             try
@@ -262,7 +260,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajCzesciMiasta")]
+        [Route("api/[controller]/DajCzesciMiasta")]
         public async Task<IActionResult> GetPartsOfCityById(GetPartsOfCitiesByIdCommand command)
         {
             try
@@ -296,7 +294,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajSchroniskaTurstyczne")]
+        [Route("api/[controller]/DajSchroniskaTurstyczne")]
         public async Task<IActionResult> GetTourisiticSheltersInVoivodeshipById(GetTouristicSheltersInVoivodeshipByIdCommand command)
         {
             try
