@@ -53,6 +53,7 @@ You can develop and change the code in a very real sense.
   POST /api/TERC/DajPowiatyWWojewodztwie
 ```
 
+
 ##### Get county by id
 
 ```http
@@ -74,7 +75,7 @@ You can develop and change the code in a very real sense.
 ##### Get all Countrysides
 
 ```http
-  POST /api/TERC/DajTerenyWiejskie
+  POST /api/TERC/DajTerenyWiejskieWPowiecie
 ```
 
 ### SIMC
@@ -82,7 +83,7 @@ You can develop and change the code in a very real sense.
 ##### Get all cities
 
 ```http
-  POST /api/SIMC/Miasta
+  POST /api/SIMC/DajMiasta
 ```
 
 ##### Get city in voivodeship by id
@@ -141,7 +142,7 @@ You can develop and change the code in a very real sense.
   POST /api/ULIC/DajUliceWPowiecie
 ```
 
-##### Get market squares
+##### Get market squares in voivodeship by id
 
 ```http
   POST /api/ULIC/DajRynki
@@ -153,20 +154,27 @@ You can develop and change the code in a very real sense.
   POST /api/ULIC/DajUliceWMiescie
 ```
 
-##### Get all path in Poland
+##### Get the paths
 
 ```http
   POST /api/ULIC/DajDrogi
 ```
 
-##### Get all bridges in voivodeship by id
+##### Get the bridges in voivodeship by id
 
 ```http
-  POST /api/ULIC/DajMostyWWojewodztwie
+  POST /api/ULIC/DajDrogi
 ```
 
-##### Get all parks in voivodeship by id
+##### Get the parks in voivodeship by id
 
 ```http
   POST /api/ULIC/DajParkiWWojewodztwie
 ```
+
+##### Get the parks in voivodeship by id
+
+```http
+  POST /api/ULIC/DajParkiWWojewodztwie
+```
+

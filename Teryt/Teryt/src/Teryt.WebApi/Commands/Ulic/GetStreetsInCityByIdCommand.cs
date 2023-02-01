@@ -26,7 +26,7 @@ namespace Teryt.WebApi.Commands.Ulic
                              on u.WojewodztwoId equals s.WojewodztwoId
                              where u.WojewodztwoId == request.WojewodztwoId
                              && u.PowiatId == request.PowiatId && u.GminaId == request.GminaId
-                             && s.PowiatId == u.PowiatId && s.GminaId == s.GminaId
+                             && s.PowiatId == u.PowiatId && s.GminaId == u.GminaId
                              && u.RodzGminaId == 4 && s.RodzGminaId == 4
                              && s.RmNumer == 99 && u.Cecha.Contains("ul.")
                              select new ULICDto

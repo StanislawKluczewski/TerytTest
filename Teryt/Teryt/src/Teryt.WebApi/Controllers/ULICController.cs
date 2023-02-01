@@ -7,7 +7,6 @@ using Teryt.WebApi.Commands.Ulic;
 
 namespace Teryt.WebApi.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     public class ULICController : ControllerBase
     {
@@ -21,7 +20,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajUliceWPowiecie")]
+        [Route("api/[controller]/DajUliceWPowiecie")]
         public async Task<IActionResult> GetStreets(GetStreetsInCountyByIdCommand command)
         {
             try
@@ -55,7 +54,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajRynki")]
+        [Route("api/[controller]/DajRynki")]
         public async Task<IActionResult> GetMarketSquaresInCounty(GetMarketSquaresInCountyByIdCommand command)
         {
             try
@@ -89,7 +88,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajUliceWMiescie")]
+        [Route("api/[controller]/DajUliceWMiescie")]
         public async Task<IActionResult> GetStreetsInCityById(GetStreetsInCityByIdCommand command)
         {
             try
@@ -123,7 +122,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajDrogi")]
+        [Route("api/[controller]/DajDrogi")]
         public async Task<IActionResult> GetAllPathsInPoland(GetPathsCommand command)
         {
             try
@@ -157,7 +156,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajMostyWWojewodztwie")]
+        [Route("api/[controller]/DajMostyWWojewodztwie")]
         public async Task<IActionResult> GetBridgesInVoivodeshipById(GetBridgesInVoivodeshipByIdCommand command)
         {
             try
@@ -191,7 +190,7 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("/DajParkiWWojewodztwie")]
+        [Route("api/[controller]/DajParkiWWojewodztwie")]
         public async Task<IActionResult> GetAllParksInVoivodeshipById(GetParksInVoivodeshipByIdCommand command)
         {
             try
