@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TercListComponent } from './terc/components/terc-list/terc-list.component';
+import { VoivodeshipsComponent } from './terc/components/voivodeships-list/voivodeships-list.component';
+import { CountiesListComponent } from './terc/components/counties-list/counties-list.component';
+import { CitiesVoivodeshipListComponent } from './terc/components/cities-voivodeship-list/cities-voivodeship-list.component';
 
 const routes: Routes = [
-  { path: "", component: TercListComponent },
-  { path: "terc-list", component: TercListComponent }
+  { path: "", component: VoivodeshipsComponent },
+  { path: "DajWojewodztwa", component: VoivodeshipsComponent },
+  { path: "DajPowiaty", component: CountiesListComponent },
+  { path: "DajMiastaWojewodztwo", component: CitiesVoivodeshipListComponent }
 ];
 
 @NgModule({
