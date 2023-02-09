@@ -1,8 +1,16 @@
 <div class="counties-container">
-  <mat-form-field appearance="fill">
-    <input matInput>
-  </mat-form-field>
-  <button mat-button color="primary" (click)="getCounties()">Daj Powiaty</button>
+  <form class="form-container" [formGroup]="selectedVoivodeship" (ngSubmit)="getCounties()">
+    <strong>W którym województwie chcesz szukać powiatów?</strong>
+    <mat-form-field appearance="fill">
+      <select matNativeControl required formControlName="wojewodztwoId">
+        <option *ngFor="let voivo of voivodeships" [value]="voivo.value">
+          {{voivo.viewValue}}
+        </option>
+      </select>
+    </mat-form-field>
+    <button mat-button type="submit">Szukaj</button>
+  </form>
+
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <ng-container matColumnDef="Nazwa">
       <th mat-header-cell *matHeaderCellDef> Nazwa </th>

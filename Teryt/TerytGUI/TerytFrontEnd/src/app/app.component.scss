@@ -43,7 +43,7 @@ p {
 }
 
 a {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 h1 {
@@ -61,4 +61,8 @@ a:hover {
 
 mat-nav-list {
   text-align: justify;
+}
+
+select.mat-input-element {
+  border: 1px solid purple;
 }
