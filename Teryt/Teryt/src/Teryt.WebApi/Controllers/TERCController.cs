@@ -8,6 +8,7 @@ using Teryt.WebApi.Commands.Terc;
 namespace Teryt.WebApi.Controllers
 {
     [ApiController]
+    [Produces("application/json")]
     public class TERCController : ControllerBase
     {
         private readonly IMediator mediator;

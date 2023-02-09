@@ -1,0 +1,39 @@
+<div class="cities-voivodeship-container">
+  <form class="form-container" (ngSubmit)="getCitiesInVoivodeship()">
+    <h3>W którym województwie chcesz szukać miast?</h3>
+    <mat-form-field appearance="fill">
+      <select matNativeControl required (change)="onSelected($event)">
+        <option *ngFor="let voivo of voivodeships" [value]="voivo.value">
+          {{voivo.viewValue}}
+        </option>
+      </select>
+    </mat-form-field>
+    <button mat-button type="submit">Szukaj</button>
+  </form>
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="Nazwa">
+      <th mat-header-cell *matHeaderCellDef> Nazwa </th>
+      <td mat-cell *matCellDef="let element"> {{element.nazwa}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Wojewodztwo ID">
+      <th mat-header-cell *matHeaderCellDef>Wojewodztwo ID</th>
+      <td mat-cell *matCellDef="let element"> {{element.wojewodztwoId}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Stan na">
+      <th mat-header-cell *matHeaderCellDef> Stan na </th>
+      <td mat-cell *matCellDef="let element"> {{element.stanNa | date:'yyyy-MM-dd'}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Nazwa Terytorialna">
+      <th mat-header-cell *matHeaderCellDef> Nazwa Terytorialna </th>
+      <td mat-cell *matCellDef="let element"> {{element.nazwaTerytorialna}} </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

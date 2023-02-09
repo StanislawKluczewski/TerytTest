@@ -1,0 +1,32 @@
+.voivodeships-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+th {
+  margin-right: 10px;
+}
+
+table {
+  margin-top: 10px;
+  width: 50%;
+  border: 1px solid black;
+}
+
+button {
+  padding: 0px 5px 0px 5px;
+  font-size: 1.1rem;
+  border: 1px solid purple;
+  background-color: whitesmoke;
+}
+
+button:hover {
+  border: 1px solid whitesmoke;
+  background-color: purple;
+  color: white;
+  transition: 0.3s;
+}

@@ -1,3 +1,64 @@
-header {
-  margin: 0;
+mat-sidenav-container {
+  height: calc(205vh - 115vh);
+}
+
+mat-sidenav {
+  width: 150px;
+  background-color: black;
+  color: whitesmoke;
+}
+
+mat-toolbar-row {
+  background-color: black;
+  color: whitesmoke;
+  border-bottom: 1px solid white;
+}
+
+mat-side-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 0px 0px 0px 0px;
+  margin-right: 10px;
+  font-size: 0.9rem;
+  border: 1px solid purple;
+  background-color: whitesmoke;
+}
+
+button:hover {
+  border: 1px solid whitesmoke;
+  background-color: purple;
+  color: white;
+  transition: 0.3s;
+}
+
+p {
+  letter-spacing: 0.12rem;
+  font-size: 0.9rem;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+a {
+  font-size: 0.8rem;
+}
+
+h1 {
+  font-size: 1.4rem;
+  letter-spacing: 0.09rem;
+  font-weight: 300;
+}
+
+a:hover {
+  transition: 0.4s;
+  color: rgb(187, 17, 187);
+  border-bottom: 1px solid purple;
+  border-top: 1px solid purple;
+}
+
+mat-nav-list {
+  text-align: justify;
 }
