@@ -90,7 +90,7 @@ namespace Teryt.WebApi.Controllers
 
         [HttpPost]
         [Route("api/[controller]/DajMiastaWojewodztwie")]
-        public async Task<IActionResult> GetAllCitiesInVoivodeshipById(GetCititesInVoivodeshipByIdCommand command)
+        public async Task<IActionResult> GetAllCitiesInVoivodeshipById([FromBody]GetCititesInVoivodeshipByIdCommand command)
         {
             try
             {
@@ -123,8 +123,8 @@ namespace Teryt.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("api/[controller]/DajPowiatyWWojewodztwie")]
-        public async Task<IActionResult> GetCountiesInVoivodeshipById(GetCountiesInVoivodeshipByIdCommand command)
+        [Route("api/[controller]/DajPowiatyWojewodztwie")]
+        public async Task<IActionResult> GetCountiesInVoivodeshipById([FromBody]GetCountiesInVoivodeshipByIdCommand command)
         {
             try
             {

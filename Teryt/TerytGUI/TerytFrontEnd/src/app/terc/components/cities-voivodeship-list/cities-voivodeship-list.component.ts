@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpHeaders } from '@angular/common/http';
 import { TercService } from '../../terc.service';
-
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cities-voivodeship-list',
@@ -12,7 +12,13 @@ export class CitiesVoivodeshipListComponent implements OnInit {
 
   dataSource!: any;
   displayedColumns: string[] = ['Nazwa', 'Nazwa Terytorialna', 'Wojewodztwo ID', 'Stan na'];
-  selectedVoivodeship!: any;
+  selectedVoivodeship = new FormGroup({
+    wojewodztwoId: new FormControl('', Validators.required)
+  });
+
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  }
 
   voivodeships = [
     { value: 2, viewValue: 'Dolnośląskie' },
@@ -36,13 +42,8 @@ export class CitiesVoivodeshipListComponent implements OnInit {
 
   }
 
-  onSelected(event: any): void {
-    this.selectedVoivodeship = parseInt(event.target.value);
-    console.log(this.selectedVoivodeship);
-  }
-
   getCitiesInVoivodeship(): void {
-    this.tercService.getCitiesInVoivdeship(parseInt(this.selectedVoivodeship)).subscribe(result => {
+    this.tercService.getCitiesInVoivdeship(this.selectedVoivodeship.value).subscribe(result => {
       this.dataSource = result;
     })
   }

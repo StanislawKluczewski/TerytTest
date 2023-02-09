@@ -8,6 +8,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
+import { MatSortModule } from '@angular/material/sort';
 
 import { VoivodeshipsComponent } from "./components/voivodeships-list/voivodeships-list.component";
 import { CountiesListComponent } from './components/counties-list/counties-list.component';
@@ -23,7 +24,8 @@ import { CitiesVoivodeshipListComponent } from './components/cities-voivodeship-
     ReactiveFormsModule,
     MatInputModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    MatSortModule
   ],
   exports: [
     MatTableModule
