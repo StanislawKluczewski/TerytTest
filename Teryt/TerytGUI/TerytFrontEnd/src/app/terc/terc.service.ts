@@ -18,11 +18,27 @@ export class TercService {
     return this.http.post<TercList>(environment.url + "TERC/DajWojewodztwa", this.httpOptions);
   }
 
-  getCitiesInVoivdeship(id: any): Observable<TercList> {
-    return this.http.post<TercList>(environment.url + "TERC/DajMiastaWojewodztwie", id, this.httpOptions);
+  getCitiesInVoivdeship(voivodeshipId: any): Observable<TercList> {
+    return this.http.post<TercList>(environment.url + "TERC/DajMiastaWojewodztwie", voivodeshipId, this.httpOptions);
   }
 
-  getCountiesInVoivodeship(id: any): Observable<TercList> {
-    return this.http.post<TercList>(environment.url + "TERC/DajPowiatyWojewodztwie", id, this.httpOptions);
+  getCountiesInVoivodeship(voivodeshipId: any): Observable<TercList> {
+    return this.http.post<TercList>(environment.url + "TERC/DajPowiatyWojewodztwie", voivodeshipId, this.httpOptions);
+  }
+
+  getSingleCounty(object: any): Observable<TercList> {
+    return this.http.post<TercList>(environment.url + "TERC/DajPowiat", object, this.httpOptions);
+  }
+
+  getDeleganciesQuarters(): Observable<TercList> {
+    return this.http.post<TercList>(environment.url + "TERC/DajDelegaturyDzielnice", this.httpOptions);
+  }
+
+  getCoutrySides(object: any): Observable<TercList> {
+    return this.http.post<TercList>(environment.url + "TERC/DajTerenyWiejskieWPowiecie", object, this.httpOptions);
+  }
+
+  getDistricts(object: any): Observable<TercList> {
+    return this.http.post<TercList>(environment.url + "TERC/DajGminy", object, this.httpOptions);
   }
 }

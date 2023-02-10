@@ -26,7 +26,8 @@ namespace Teryt.WebApi.Commands.Terc
                                  Nazwa = c.Nazwa,
                                  NazwaTerytorialna = c.NazwaTerytorialna,
                                  WojewodztwoId = c.WojewodztwoId,
-                                 StanNa = c.StanNa
+                                 StanNa = c.StanNa,
+                                 PowiatId= (int)c.PowiatId
                              };
                 return await Task.FromResult(result);
             }
