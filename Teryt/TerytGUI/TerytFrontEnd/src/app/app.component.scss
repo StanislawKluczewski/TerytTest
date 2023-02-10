@@ -42,8 +42,10 @@ p {
   margin-bottom: 0px;
 }
 
-a {
+mat-list-item a {
+  text-decoration: none;
   font-size: 0.9rem;
+  color: whitesmoke;
 }
 
 h1 {
@@ -52,17 +54,22 @@ h1 {
   font-weight: 300;
 }
 
-a:hover {
+mat-list-item a:hover {
   transition: 0.4s;
   color: rgb(187, 17, 187);
   border-bottom: 1px solid purple;
   border-top: 1px solid purple;
 }
 
-mat-nav-list {
-  text-align: justify;
-}
 
 select.mat-input-element {
   border: 1px solid purple;
+}
+
+mat-icon {
+  color: black;
+}
+
+mat-icon:hover {
+  color: whitesmoke;
 }

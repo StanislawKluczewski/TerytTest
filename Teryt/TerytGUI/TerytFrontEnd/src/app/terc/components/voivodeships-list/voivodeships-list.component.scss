@@ -28,12 +28,13 @@ table {
   text-align: center;
 }
 
-
 button {
   padding: 0px 5px 0px 5px;
   font-size: 1.1rem;
   border: 1px solid purple;
+  color: black;
   background-color: whitesmoke;
+  margin-left: 10px;
 }
 
 button:hover {
@@ -41,4 +42,9 @@ button:hover {
   background-color: purple;
   color: white;
   transition: 0.3s;
+}
+
+mat-toolbar-row {
+  display: flex;
+  justify-content: center;
 }

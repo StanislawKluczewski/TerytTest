@@ -9,10 +9,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { MatSortModule } from '@angular/material/sort';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { VoivodeshipsComponent } from "./components/voivodeships-list/voivodeships-list.component";
 import { CountiesListComponent } from './components/counties-list/counties-list.component';
 import { CitiesVoivodeshipListComponent } from './components/cities-voivodeship-list/cities-voivodeship-list.component';
+import { SingleCountyComponent } from './components/single-county/single-county.component';
+import { DeleganciesQuartersListComponent } from './components/delegancies-quarters-list/delegancies-quarters-list.component';
+import { CountrySidesListComponent } from './components/countrysides-list/countrysides-list.component';
+import { DistrictsListComponent } from './components/districts-list/districts-list.component';
 
 @NgModule({
   imports: [
@@ -25,7 +30,8 @@ import { CitiesVoivodeshipListComponent } from './components/cities-voivodeship-
     MatInputModule,
     MatSelectModule,
     FormsModule,
-    MatSortModule
+    MatSortModule,
+    MatToolbarModule
   ],
   exports: [
     MatTableModule
@@ -33,7 +39,11 @@ import { CitiesVoivodeshipListComponent } from './components/cities-voivodeship-
   declarations: [
     VoivodeshipsComponent,
     CountiesListComponent,
-    CitiesVoivodeshipListComponent
+    CitiesVoivodeshipListComponent,
+    SingleCountyComponent,
+    DeleganciesQuartersListComponent,
+    CountrySidesListComponent,
+    DistrictsListComponent
   ]
 })
 export class TercModule { }

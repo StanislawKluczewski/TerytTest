@@ -11,9 +11,6 @@ import { HttpHeaders } from '@angular/common/http';
 export class VoivodeshipsComponent implements OnInit {
 
   dataSource!: any;
-  httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  }
   displayedColumns: string[] = ['Nazwa', 'Nazwa Terytorialna', 'Wojewodztwo ID', 'Stan na'];
 
   constructor(private tercService: TercService) {

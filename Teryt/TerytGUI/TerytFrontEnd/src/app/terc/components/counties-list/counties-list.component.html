@@ -2,11 +2,11 @@
   <form class="form-container" [formGroup]="selectedVoivodeship" (ngSubmit)="getCounties()">
     <strong>W którym województwie chcesz szukać powiatów?</strong>
     <mat-form-field appearance="fill">
-      <select matNativeControl required formControlName="wojewodztwoId">
-        <option *ngFor="let voivo of voivodeships" [value]="voivo.value">
+      <mat-select matNativeControl required formControlName="wojewodztwoId">
+        <mat-option *ngFor="let voivo of voivodeships" [value]="voivo.value">
           {{voivo.viewValue}}
-        </option>
-      </select>
+        </mat-option>
+      </mat-select>
     </mat-form-field>
     <button mat-button type="submit">Szukaj</button>
   </form>
@@ -15,6 +15,11 @@
     <ng-container matColumnDef="Nazwa">
       <th mat-header-cell *matHeaderCellDef> Nazwa </th>
       <td mat-cell *matCellDef="let element"> {{element.nazwa}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Powiat ID">
+      <th mat-header-cell *matHeaderCellDef>Powiat ID</th>
+      <td mat-cell *matCellDef="let element"> {{element.powiatId}} </td>
     </ng-container>
 
     <ng-container matColumnDef="Wojewodztwo ID">
