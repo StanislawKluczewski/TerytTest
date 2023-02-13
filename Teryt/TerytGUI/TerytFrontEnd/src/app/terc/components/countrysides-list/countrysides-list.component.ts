@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TercService } from '../../terc.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Terc } from '../../models/terc.model';
 
 @Component({
   selector: 'app-country-sides-list',
@@ -10,7 +11,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class CountrySidesListComponent implements OnInit {
 
   dataSource!: any;
-  countyName!: any;
+  counties!: any;
   displayedColumns: string[] = ['Nazwa', 'Nazwa Terytorialna', 'Powiat ID', 'Wojewodztwo ID', 'Stan na'];
   selected = new FormGroup({
     wojewodztwoId: new FormControl('', Validators.required),
@@ -35,11 +36,19 @@ export class CountrySidesListComponent implements OnInit {
     { value: 30, viewValue: 'Wielkopolskie' },
     { value: 32, viewValue: 'Zachodniopomorskie' }]
 
-  constructor(private tercService: TercService) { }
+  constructor(private tercService: TercService) {
+  }
 
   getCoutryside(): void {
     this.tercService.getCoutrySides(this.selected.value).subscribe(result => {
       this.dataSource = result;
+    })
+  }
+
+  showCounties(event: any): void {
+    this.selected.value.wojewodztwoId = event;
+    this.tercService.getCountiesInVoivodeship(this.selected.value).subscribe(result => {
+      this.counties = result;
     })
   }
 

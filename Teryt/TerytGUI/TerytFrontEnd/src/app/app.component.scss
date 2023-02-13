@@ -11,7 +11,7 @@ mat-sidenav {
 mat-toolbar-row {
   background-color: black;
   color: whitesmoke;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid purple;
 }
 
 mat-side-content {
@@ -72,4 +72,15 @@ mat-icon {
 
 mat-icon:hover {
   color: whitesmoke;
+}
+
+footer {
+  background-color: black;
+  margin-bottom: 0px;
+  height: 35px;
+  border-top: 1px solid purple;
+  text-align: center;
+  color: whitesmoke;
+  padding-top: 10px;
+  letter-spacing: 0.02rem;
 }

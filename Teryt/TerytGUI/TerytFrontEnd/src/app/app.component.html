@@ -3,6 +3,11 @@
     <button mat-icon-button (click)="opened=!opened">
       <mat-icon>menu</mat-icon>
     </button>
+    <a mat-list-item [routerLink]="['/Start']">
+      <button mat-icon-button>
+        <mat-icon>home</mat-icon>
+      </button>
+    </a>
     <h1>{{title2}}</h1>
   </mat-toolbar-row>
 </mat-toolbar>
@@ -15,9 +20,6 @@
       </mat-list-item>
       <mat-list-item role="listitem">
         <a mat-list-item [routerLink]="['/DajPowiaty']">Powiaty</a>
-      </mat-list-item>
-      <mat-list-item role="listitem">
-        <a mat-list-item [routerLink]="['/DajPowiat']">Powiat </a>
       </mat-list-item>
       <mat-list-item role="listitem">
         <a mat-list-item [routerLink]="['/DajMiastaWojewodztwo']">Miasta</a>
@@ -43,3 +45,6 @@
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
+<footer>
+  Stanislaw Kluczewski © 2023
+</footer>
