@@ -14,7 +14,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { VoivodeshipsComponent } from "./components/voivodeships-list/voivodeships-list.component";
 import { CountiesListComponent } from './components/counties-list/counties-list.component';
 import { CitiesVoivodeshipListComponent } from './components/cities-voivodeship-list/cities-voivodeship-list.component';
-import { SingleCountyComponent } from './components/single-county/single-county.component';
 import { DeleganciesQuartersListComponent } from './components/delegancies-quarters-list/delegancies-quarters-list.component';
 import { CountrySidesListComponent } from './components/countrysides-list/countrysides-list.component';
 import { DistrictsListComponent } from './components/districts-list/districts-list.component';
@@ -40,7 +39,6 @@ import { DistrictsListComponent } from './components/districts-list/districts-li
     VoivodeshipsComponent,
     CountiesListComponent,
     CitiesVoivodeshipListComponent,
-    SingleCountyComponent,
     DeleganciesQuartersListComponent,
     CountrySidesListComponent,
     DistrictsListComponent

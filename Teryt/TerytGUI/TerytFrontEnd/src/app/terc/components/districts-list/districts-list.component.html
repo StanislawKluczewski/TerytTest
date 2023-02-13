@@ -1,17 +1,22 @@
 <div class="districts-list-container">
-  <strong>Wybierz województwo i powiat</strong>
+  <strong>Żeby wyszukać gminy wybierz województwo, a następnie powiat</strong>
   <form class="form-container" [formGroup]="selected" (ngSubmit)="getDistricts()">
-    <mat-form-field class="example-full-width">
-      <input type="number" matInput placeholder="Szukany powiat" formControlName="powiatId">
-    </mat-form-field>
     <mat-form-field appearance="fill">
-      <mat-select matNativeControl required formControlName="wojewodztwoId">
+      <mat-select matNativeControl required formControlName="wojewodztwoId" (valueChange)="showCounties($event)"
+        placeholder="Wojewodztwo">
         <mat-option *ngFor="let voivo of voivodeships" [value]="voivo.value">
           {{voivo.viewValue}}
         </mat-option>
       </mat-select>
     </mat-form-field>
-    <button mat-button>Wyszukaj powiat</button>
+    <mat-form-field appearance="fill">
+      <mat-select matNativeControl required formControlName="powiatId" placeholder="Powiat">
+        <mat-option *ngFor="let county of counties" [value]="county.powiatId">
+          {{county.nazwa}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-button>Wyszukaj gminy</button>
   </form>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <ng-container matColumnDef="Nazwa">

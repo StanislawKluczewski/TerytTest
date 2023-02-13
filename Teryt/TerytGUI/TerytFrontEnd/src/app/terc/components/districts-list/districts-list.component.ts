@@ -10,7 +10,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class DistrictsListComponent implements OnInit {
 
   dataSource!: any;
-  countyName!: any;
+  counties!: any;
   displayedColumns: string[] = ['Nazwa', 'Nazwa Terytorialna', 'Powiat ID', 'Wojewodztwo ID', 'Stan na'];
   selected = new FormGroup({
     wojewodztwoId: new FormControl('', Validators.required),
@@ -42,6 +42,14 @@ export class DistrictsListComponent implements OnInit {
       this.dataSource = result;
     })
   }
+
+  showCounties(event: any): void {
+    this.selected.value.wojewodztwoId = event;
+    this.tercService.getCountiesInVoivodeship(this.selected.value).subscribe(result => {
+      this.counties = result;
+    })
+  }
+
 
   ngOnInit(): void {
   }

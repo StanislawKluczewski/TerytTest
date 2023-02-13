@@ -6,3 +6,8 @@ docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=Studenci2022' -v sqlvolume:/
 # --name sqlserverdocker 
 # --restart unless-stopped
 # -v sqlvolume:/var/opt/mssql
+
+
+ docker build -t teryt.webapi:1.0.0 . --network=host
+ docker stop "krs.changeevent-generator" && docker rm "krs.changeevent-generator"
+ docker run -t -d -p 9296:80 -p 9297:443 -v /etc/nginx/ssl:/etc/nginx/ssl -e "ASPNETCORE_ENVIRONMENT=Development" --name="teryt.webapi" --restart unless-stopped teryt.webapi:1.0.0
