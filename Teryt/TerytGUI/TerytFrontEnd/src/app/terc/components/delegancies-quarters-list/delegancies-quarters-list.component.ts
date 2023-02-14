@@ -11,10 +11,7 @@ export class DeleganciesQuartersListComponent implements OnInit {
   dataSource!: any;
   displayedColumns: string[] = ['Nazwa', 'Nazwa Terytorialna', 'Powiat ID', 'Wojewodztwo ID', 'Stan na'];
 
-  constructor(private tercService: TercService) {
-    console.log(this.dataSource);
-  }
-
+  constructor(private tercService: TercService) { }
 
   ngOnInit(): void {
   }

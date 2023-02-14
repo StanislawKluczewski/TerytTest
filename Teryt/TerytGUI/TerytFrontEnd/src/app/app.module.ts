@@ -12,6 +12,7 @@ import { MatListModule } from "@angular/material/list";
 import { MatButtonModule } from "@angular/material/button";
 
 import { TercModule } from './terc/terc.module';
+import { SimcModule } from './simc/simc.module';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
@@ -30,7 +31,8 @@ import { SharedModule } from './shared/shared.module';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+    SimcModule
   ],
   providers: [
 

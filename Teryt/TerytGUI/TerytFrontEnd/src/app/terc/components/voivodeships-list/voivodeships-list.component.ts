@@ -13,10 +13,7 @@ export class VoivodeshipsComponent implements OnInit {
   dataSource!: any;
   displayedColumns: string[] = ['Nazwa', 'Nazwa Terytorialna', 'Wojewodztwo ID', 'Stan na'];
 
-  constructor(private tercService: TercService) {
-    console.log(this.dataSource);
-  }
-
+  constructor(private tercService: TercService) { }
 
   getAllVoivodeships(): void {
     this.tercService.getAllVoivodeships().subscribe(result => {

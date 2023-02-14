@@ -1,0 +1,45 @@
+<div class="cities-voivodeship-container">
+  <strong>W którym województwie chcesz szukać miast?</strong>
+  <form class="form-container" [formGroup]="selected" (ngSubmit)="getCitiesInVoivodeship()">
+    <mat-form-field appearance="fill">
+      <mat-select matNativeControl required formControlName="wojewodztwoId">
+        <mat-option *ngFor="let voivo of voivodeships" [value]="voivo.value">
+          {{voivo.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-button type="submit">Szukaj miast</button>
+  </form>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="Nazwa">
+      <th mat-header-cell *matHeaderCellDef> Nazwa </th>
+      <td mat-cell *matCellDef="let element"> {{element.nazwa}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Wojewodztwo ID">
+      <th mat-header-cell *matHeaderCellDef>Wojewodztwo ID</th>
+      <td mat-cell *matCellDef="let element"> {{element.wojewodztwoId}} </td>
+    </ng-container>
+    <ng-container matColumnDef="RodzGmina ID">
+      <th mat-header-cell *matHeaderCellDef>RodzGmina ID</th>
+      <td mat-cell *matCellDef="let element"> {{element.rodzGminaId}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Gmina ID">
+      <th mat-header-cell *matHeaderCellDef>Gmina ID</th>
+      <td mat-cell *matCellDef="let element"> {{element.gminaId}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Powiat ID">
+      <th mat-header-cell *matHeaderCellDef>Powiat ID</th>
+      <td mat-cell *matCellDef="let element"> {{element.powiatId}} </td>
+    </ng-container>
+    <ng-container matColumnDef="RM Numer">
+      <th mat-header-cell *matHeaderCellDef>RM Numer</th>
+      <td mat-cell *matCellDef="let element"> {{element.rmNumer}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Stan na">
+      <th mat-header-cell *matHeaderCellDef> Stan na </th>
+      <td mat-cell *matCellDef="let element"> {{element.stanNa | date:'yyyy-MM-dd'}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
