@@ -9,6 +9,7 @@ namespace Teryt.WebApi.DTO.Response
         public int RodzGminaId { get; set; }
         public int GminaId { get; set; }
         public int PowiatId { get; set; }
+        public int RmNumer { get; set; }
         public DateTime StanNa { get; set; }
     }
 }

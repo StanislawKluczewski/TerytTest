@@ -50,7 +50,6 @@ export class DistrictsListComponent implements OnInit {
     })
   }
 
-
   ngOnInit(): void {
   }
 

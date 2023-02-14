@@ -31,10 +31,11 @@ namespace Teryt.WebApi.Commands.Simc
                                  PowiatId = s.PowiatId,
                                  GminaId = s.GminaId,
                                  RodzGminaId = s.RodzGminaId,
-                                 StanNa = s.StanNa
+                                 StanNa = s.StanNa,
+                                 RmNumer = s.RmNumer
                              };
 
-                return await Task.FromResult(result);
+                return await Task.FromResult(result.Distinct());
             }
         }
     }

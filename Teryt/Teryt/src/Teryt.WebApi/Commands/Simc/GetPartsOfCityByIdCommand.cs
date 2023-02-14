@@ -31,7 +31,8 @@ namespace Teryt.WebApi.Commands.Simc
                                  PowiatId = p.PowiatId,
                                  GminaId = p.GminaId,
                                  RodzGminaId = p.RodzGminaId,
-                                 StanNa = p.StanNa
+                                 StanNa = p.StanNa,
+                                 RmNumer = p.RmNumer
                              };
                 return await Task.FromResult(result);
             }

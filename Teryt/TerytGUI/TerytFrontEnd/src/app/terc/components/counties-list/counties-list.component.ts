@@ -15,10 +15,7 @@ export class CountiesListComponent implements OnInit {
   selectedVoivodeship = new FormGroup({
     wojewodztwoId: new FormControl('', Validators.required)
   });
-  httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  }
-
+  
   voivodeships = [
     { value: 2, viewValue: 'Dolnośląskie' },
     { value: 4, viewValue: 'Kujawsko-Pomorskie' },
