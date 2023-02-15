@@ -13,8 +13,13 @@
 </mat-toolbar>
 <mat-sidenav-container>
   <mat-sidenav [(opened)]="opened" mode="side">
-    <p>TERC</p>
-    <mat-list>
+    <div class="nav-header">
+      <p>TERC</p>
+      <button class="header-button">
+        <mat-icon class="horizontal-icon" (click)="this.openedTerc = !this.openedTerc">more_horizontal</mat-icon>
+      </button>
+    </div>
+    <mat-list *ngIf="this.openedTerc">
       <mat-list-item role="listitem">
         <a mat-list-item [routerLink]="['/TERC/DajWojewodztwa']">Województwa</a>
       </mat-list-item>
@@ -34,8 +39,13 @@
         <a mat-list-item [routerLink]="['/TERC/DajGminy']">Gminy</a>
       </mat-list-item>
     </mat-list>
-    <p>SIMC</p>
-    <mat-nav-list>
+    <div class="nav-header">
+      <p>SIMC</p>
+      <button class="header-button">
+        <mat-icon class="horizontal-icon" (click)="this.openedSimc = !this.openedSimc">more_horizontal</mat-icon>
+      </button>
+    </div>
+    <mat-nav-list *ngIf="this.openedSimc">
       <mat-list-item role="listitem">
         <a mat-list-item [routerLink]="['/SIMC/DajMiastaWojewodztwo']">Miasta</a>
       </mat-list-item>
@@ -61,8 +71,31 @@
         <a mat-list-item [routerLink]="['/SIMC/DajCaleWsie']">Całe wsie</a>
       </mat-list-item>
     </mat-nav-list>
-    <p>ULIC</p>
-    <mat-nav-list>
+    <div class="nav-header">
+      <p>ULIC</p>
+      <button class="header-button">
+        <mat-icon class="horizontal-icon" (click)="this.openedUlic = !this.openedUlic">more_horizontal</mat-icon>
+      </button>
+    </div>
+    <mat-nav-list *ngIf="this.openedUlic">
+      <mat-list-item role="listitem">
+        <a mat-list-item [routerLink]="['/ULIC/DajMostyWWojewodztwie']">Mosty</a>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <a mat-list-item [routerLink]="['/ULIC/DajDrogi']">Drogi ścieżki</a>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <a mat-list-item [routerLink]="['/ULIC/DajRynki']">Rynki place</a>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <a mat-list-item [routerLink]="['/ULIC/DajParkiWWojewodztwie']">Parki ogrody</a>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <a mat-list-item [routerLink]="['/ULIC/DajUliceWMiescie']">Ulice w mieście</a>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <a mat-list-item [routerLink]="['/ULIC/DajUliceWPowiecie']">Ulice w powiecie</a>
+      </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
