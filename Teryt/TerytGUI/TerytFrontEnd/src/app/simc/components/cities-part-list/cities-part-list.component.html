@@ -3,7 +3,7 @@
   <form class="form-container" [formGroup]="selected" (ngSubmit)="getPartOfCities()">
     <mat-form-field appearance="fill">
       <mat-select matNativeControl required formControlName="wojewodztwoId" (valueChange)="showCounties($event)"
-        placeholder="Wojewodztwo">
+        placeholder="Województwo">
         <mat-option *ngFor="let voivo of voivodeships" [value]="voivo.value">
           {{voivo.viewValue}}
         </mat-option>

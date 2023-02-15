@@ -61,6 +61,11 @@ mat-list-item a:hover {
   border-top: 1px solid purple;
 }
 
+span {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 
 select.mat-input-element {
   border: 1px solid purple;
@@ -83,4 +88,39 @@ footer {
   color: whitesmoke;
   padding-top: 10px;
   letter-spacing: 0.02rem;
+}
+
+mat-nav-list {
+  margin: 10px;
+  margin-bottom: 10px;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+}
+
+.header-button {
+  margin-top: 15px;
+  border: none;
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 5px;
+}
+
+.horizontal-icon {
+  color: whitesmoke;
+}
+
+.horizontal-icon:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: whitesmoke;
+  color: black;
+}
+
+.header-button:hover {
+  border: none;
+  transition: 0.3s;
+  background-color: transparent;
 }

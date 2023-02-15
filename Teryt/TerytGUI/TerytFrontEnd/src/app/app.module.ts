@@ -13,7 +13,9 @@ import { MatButtonModule } from "@angular/material/button";
 
 import { TercModule } from './terc/terc.module';
 import { SimcModule } from './simc/simc.module';
+import { UlicModule } from './ulic/ulic.module';
 import { SharedModule } from './shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    UlicModule,
     TercModule,
     SharedModule,
     MatTableModule,

@@ -15,6 +15,12 @@ import { LocalitiesPartsListComponent } from './simc/components/localities-parts
 import { VillagesListComponent } from './simc/components/villages-list/villages-list.component';
 import { CitiesPartListComponent } from './simc/components/cities-part-list/cities-part-list.component';
 import { WholeVillagesListComponent } from './simc/components/whole-villages-list/whole-villages-list.component';
+import { BridgesListComponent } from './ulic/components/bridges-list/bridges-list.component';
+import { MarketSquaresListComponent } from './ulic/components/market-squares-list/market-squares-list.component';
+import { ParksListComponent } from './ulic/components/parks-list/parks-list.component';
+import { PathsListComponent } from './ulic/components/paths-list/paths-list.component';
+import { CityStreetsListComponent } from './ulic/components/city-streets-list/city-streets-list.component';
+import { CountyStreetsListComponent } from './ulic/components/county-streets-list/county-streets-list.component';
 
 const routes: Routes = [
   { path: "Start", component: HomeComponent },
@@ -32,7 +38,13 @@ const routes: Routes = [
   { path: "SIMC/DajCzesciMiejscowosci", component: LocalitiesPartsListComponent },
   { path: "SIMC/DajWsieWPowiecie", component: VillagesListComponent },
   { path: "SIMC/DajCzesciMiasta", component: CitiesPartListComponent },
-  { path: "SIMC/DajCaleWsie", component: WholeVillagesListComponent }
+  { path: "SIMC/DajCaleWsie", component: WholeVillagesListComponent },
+  { path: "ULIC/DajUliceWPowiecie", component: CountyStreetsListComponent },
+  { path: "ULIC/DajRynki", component: MarketSquaresListComponent },
+  { path: "ULIC/DajUliceWMiescie", component: CityStreetsListComponent },
+  { path: "ULIC/DajMostyWWojewodztwie", component: BridgesListComponent },
+  { path: "ULIC/DajParkiWWojewodztwie", component: ParksListComponent },
+  { path: "ULIC/DajDrogi", component: PathsListComponent }
 ];
 
 @NgModule({
