@@ -1,0 +1,126 @@
+mat-sidenav-container {
+  height: calc(205vh - 115vh);
+}
+
+mat-sidenav {
+  width: 150px;
+  background-color: black;
+  color: whitesmoke;
+}
+
+mat-toolbar-row {
+  background-color: black;
+  color: whitesmoke;
+  border-bottom: 1px solid purple;
+}
+
+mat-side-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 0px 0px 0px 0px;
+  margin-right: 10px;
+  font-size: 0.9rem;
+  border: 1px solid purple;
+  background-color: whitesmoke;
+}
+
+button:hover {
+  border: 1px solid whitesmoke;
+  background-color: purple;
+  color: white;
+  transition: 0.3s;
+}
+
+p {
+  letter-spacing: 0.12rem;
+  font-size: 0.9rem;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+mat-list-item a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: whitesmoke;
+}
+
+h1 {
+  font-size: 1.4rem;
+  letter-spacing: 0.09rem;
+  font-weight: 300;
+}
+
+mat-list-item a:hover {
+  transition: 0.4s;
+  color: rgb(187, 17, 187);
+  border-bottom: 1px solid purple;
+  border-top: 1px solid purple;
+}
+
+span {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+select.mat-input-element {
+  border: 1px solid purple;
+}
+
+mat-icon {
+  color: black;
+}
+
+mat-icon:hover {
+  color: whitesmoke;
+}
+
+footer {
+  background-color: black;
+  margin-bottom: 0px;
+  height: 35px;
+  border-top: 1px solid purple;
+  text-align: center;
+  color: whitesmoke;
+  padding-top: 10px;
+  letter-spacing: 0.02rem;
+}
+
+mat-nav-list {
+  margin: 10px;
+  margin-bottom: 10px;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+}
+
+.header-button {
+  margin-top: 15px;
+  border: none;
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 5px;
+}
+
+.horizontal-icon {
+  color: whitesmoke;
+}
+
+.horizontal-icon:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: whitesmoke;
+  color: black;
+}
+
+.header-button:hover {
+  border: none;
+  transition: 0.3s;
+  background-color: transparent;
+}
