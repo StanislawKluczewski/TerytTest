@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Observable, retry } from "rxjs";
 import { HttpClient } from "@angular/common/http";
-import { environment } from "src/environments/environment";
+import { environment } from "src/environments/environment.prod";
 import { TercList } from "./models/terc.model";
 import { HttpHeaders } from "@angular/common/http";
 
