@@ -1,14 +1,33 @@
 <mat-toolbar>
   <mat-toolbar-row>
-    <button mat-icon-button (click)="opened=!opened">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <a mat-list-item [routerLink]="['/Start']">
-      <button mat-icon-button>
-        <mat-icon>home</mat-icon>
+    <span>
+      <button mat-icon-button (click)="opened=!opened">
+        <mat-icon>menu</mat-icon>
       </button>
-    </a>
+      <a mat-list-item [routerLink]="['/Start']">
+        <button mat-icon-button>
+          <mat-icon>home</mat-icon>
+        </button>
+      </a>
+    </span>
     <h1>{{title2}}</h1>
+    <span>
+      <a mat-list-item [routerLink]="['/Start/Log-in']">
+        <button mat-icon-button>
+          <mat-icon>login</mat-icon>
+        </button>
+      </a>
+      <a mat-list-item [routerLink]="['/Start/Log-out']">
+        <button mat-icon-button>
+          <mat-icon>logout</mat-icon>
+        </button>
+      </a>
+      <a mat-list-item [routerLink]="['/Start/Sign-in']">
+        <button mat-icon-button>
+          <mat-icon>account_circle</mat-icon>
+        </button>
+      </a>
+    </span>
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-sidenav-container>

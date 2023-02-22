@@ -21,10 +21,14 @@ import { ParksListComponent } from './ulic/components/parks-list/parks-list.comp
 import { PathsListComponent } from './ulic/components/paths-list/paths-list.component';
 import { CityStreetsListComponent } from './ulic/components/city-streets-list/city-streets-list.component';
 import { CountyStreetsListComponent } from './ulic/components/county-streets-list/county-streets-list.component';
+import { LogInComponent } from './core/components/log-in/log-in.component';
+import { SignUpComponent } from './core/components/sign-up/sign-up.component';
 
 const routes: Routes = [
-  { path: "Start", component: HomeComponent },
   { path: "", component: VoivodeshipsComponent },
+  { path: "Start", component: HomeComponent },
+  { path: "Start/Sign-in", component: SignUpComponent },
+  { path: "Start/Log-in", component: LogInComponent },
   { path: "TERC/DajWojewodztwa", component: VoivodeshipsComponent },
   { path: "TERC/DajPowiaty", component: CountiesListComponent },
   { path: "TERC/DajMiastaWojewodztwo", component: CitiesVoivodeshipListComponent },
@@ -44,7 +48,7 @@ const routes: Routes = [
   { path: "ULIC/DajUliceWMiescie", component: CityStreetsListComponent },
   { path: "ULIC/DajMostyWWojewodztwie", component: BridgesListComponent },
   { path: "ULIC/DajParkiWWojewodztwie", component: ParksListComponent },
-  { path: "ULIC/DajDrogi", component: PathsListComponent }
+  { path: "ULIC/DajDrogi", component: PathsListComponent },
 ];
 
 @NgModule({
