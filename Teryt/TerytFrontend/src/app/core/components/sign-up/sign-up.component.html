@@ -1,0 +1,19 @@
+<div class="sign-in-container">
+  <form class="form-container" [formGroup]="selected" (ngSubmit)="SignUp()">
+    <strong>Panel rejestracji. Proszę podać login, email oraz hasło.</strong>
+    <mat-form-field appearance="fill">
+      <mat-label>Login</mat-label>
+      <input matInput type="text" formControlName="login" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" formControlName="email" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Hasło</mat-label>
+      <input matInput type="password" formControlName="password" required>
+    </mat-form-field>
+    <button mat-button type="submit">Zarejestruj się</button>
+    <p>Masz juz konto? <a [routerLink]="['/Start/Log-in']">Przejdź do logowania</a></p>
+  </form>
+</div>

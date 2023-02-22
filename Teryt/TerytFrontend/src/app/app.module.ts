@@ -15,7 +15,7 @@ import { TercModule } from './terc/terc.module';
 import { SimcModule } from './simc/simc.module';
 import { UlicModule } from './ulic/ulic.module';
 import { SharedModule } from './shared/shared.module';
-
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,8 @@ import { SharedModule } from './shared/shared.module';
     MatIconModule,
     MatListModule,
     MatButtonModule,
-    SimcModule
+    SimcModule,
+    CoreModule
   ],
   providers: [
 
