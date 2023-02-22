@@ -1,0 +1,53 @@
+.localities-part-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+th.mat-header-cell {
+  margin-right: 10px;
+  text-align: center;
+  background-color: black;
+  color: whitesmoke;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+td,
+th {
+  border: 1px solid rgb(99, 6, 99);
+}
+
+table {
+  margin-top: 10px;
+  width: 50%;
+  border: 1px solid black;
+  text-align: center;
+}
+
+button {
+  padding: 0px 5px 0px 5px;
+  font-size: 1.1rem;
+  border: 1px solid purple;
+  background-color: whitesmoke;
+}
+
+button:hover {
+  border: 1px solid whitesmoke;
+  background-color: purple;
+  color: white;
+  transition: 0.3s;
+}
+
+mat-form-field {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.form-container {
+  margin-top: 10px;
+}

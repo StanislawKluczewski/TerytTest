@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "r/BQwqacdWlzer+o/BivwAt9S2jCOqoGGkx233hDhrNC0lHyGBi8Ql1289yRwkbZAfSWaV3eeOIbYd6tPergMA==",
+  "dgSpecHash": "5srS7tIegMKDmIO9RwteLnCg91MSuIELaIWqeEXe/NEviINsB1/kNqFHp/VOVLgFYJSkw6wSbe6V5gu/1E7qNw==",
   "success": true,
   "projectFilePath": "C:\\Users\\klucz\\OneDrive\\Pulpit\\Stasiu\\Github\\Teryt\\Teryt\\Teryt\\src\\Teryt.WebApi\\Teryt.WebApi.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\klucz\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\klucz\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\klucz\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\klucz\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.9\\microsoft.aspnetcore.authentication.jwtbearer.6.0.9.nupkg.sha512",
     "C:\\Users\\klucz\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\klucz\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\klucz\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",
