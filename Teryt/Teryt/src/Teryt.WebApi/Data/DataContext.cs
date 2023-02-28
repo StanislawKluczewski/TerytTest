@@ -25,7 +25,10 @@ namespace Teryt.WebApi.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connectionString = configuration.GetConnectionString("TerrytDatabase");
-            optionsBuilder.UseSqlServer(connectionString);
+            optionsBuilder.UseSqlServer(connectionString, builder =>{
+                builder.EnableRetryOnFailure(5,TimeSpan.FromSeconds(10), null);
+            });
+            base.OnConfiguring(optionsBuilder);
         }
     }
 }
