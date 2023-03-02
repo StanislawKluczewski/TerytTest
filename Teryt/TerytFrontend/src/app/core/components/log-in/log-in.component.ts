@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CoreService } from '../../core.service';
 import { Router } from '@angular/router';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Component({
   selector: 'app-log-in',
@@ -14,7 +15,7 @@ export class LogInComponent implements OnInit {
     email: new FormControl('', [Validators.email, this.checkAppropriateField]),
     password: new FormControl('', [Validators.required, this.checkAppropriateField])
   });
-  constructor(private coreService: CoreService, private router: Router) { }
+  constructor(private coreService: CoreService, private router: Router, private helper: JwtHelperService) { }
 
   ngOnInit(): void {
 
@@ -22,9 +23,11 @@ export class LogInComponent implements OnInit {
 
   logIn(): void {
     this.coreService.logIn(this.selected.value).subscribe(result => {
-      console.log(result);
-      this.router.navigateByUrl("/")
-    })
+      localStorage.setItem('token', result);
+      window.location.reload();
+    });
+    this.router.navigateByUrl("/");
+
   }
 
   checkAppropriateField(formControl: FormControl) {

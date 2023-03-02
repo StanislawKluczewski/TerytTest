@@ -11,18 +11,19 @@
       </a>
     </span>
     <h1>{{title2}}</h1>
-    <span>
-      <a mat-list-item [routerLink]="['/Start/Log-in']">
+    <span class="user-panel">
+      <a *ngIf="!this.userIsLogged" mat-list-item [routerLink]="['/Start/Log-in']">
         <button mat-icon-button>
           <mat-icon>login</mat-icon>
         </button>
       </a>
-      <a mat-list-item [routerLink]="['/Start/Log-out']">
-        <button mat-icon-button>
+      <p *ngIf="this.userIsLogged">{{this.userEmail}}</p>
+      <a *ngIf="this.userIsLogged" mat-list-item>
+        <button mat-icon-button (click)="logout()">
           <mat-icon>logout</mat-icon>
         </button>
       </a>
-      <a mat-list-item [routerLink]="['/Start/Sign-in']">
+      <a *ngIf="!this.userIsLogged" mat-list-item [routerLink]="['/Start/Sign-in']">
         <button mat-icon-button>
           <mat-icon>account_circle</mat-icon>
         </button>
