@@ -1,7 +1,8 @@
 global using Teryt.WebApi.Models;
 using MediatR;
-using NLog;
 using NLog.Web;
+using Ocelot.Middleware;
+using Ocelot.DependencyInjection;
 using System.Reflection;
 using Teryt.WebApi.Data;
 
@@ -25,6 +26,10 @@ try
     builder.Logging.ClearProviders();
     builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
     builder.Host.UseNLog();
+
+    // Adding Ocelot
+    builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
+    builder.Services.AddOcelot(builder.Configuration);
 
     var app = builder.Build();
 
