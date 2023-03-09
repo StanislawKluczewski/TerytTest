@@ -19,7 +19,7 @@ try
     builder.Services.AddSwaggerGen();
     builder.Services.AddCors(p => p.AddPolicy("CorsPolicy", build =>
     {
-        build.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+        build.WithOrigins("http://localhost:4300").AllowAnyMethod().AllowAnyHeader();
     }));
     builder.Services.AddDbContext<DataContext>();
     builder.Services.AddMediatR(Assembly.GetExecutingAssembly());

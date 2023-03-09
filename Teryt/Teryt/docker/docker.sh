@@ -9,5 +9,10 @@ docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=Studenci2022' -v sqlvolume:/
 
 
  docker build -t teryt.webapi:1.0.0 . --network=host
- docker stop "krs.changeevent-generator" && docker rm "krs.changeevent-generator"
  docker run -t -d -p 9296:80 -p 9297:443 -v /etc/nginx/ssl:/etc/nginx/ssl -e "ASPNETCORE_ENVIRONMENT=Development" --name="teryt.webapi" --restart unless-stopped teryt.webapi:1.0.0
+
+
+// Frontend
+
+ docker build -t teryt-frontend:1.0.1 .
+docker run -d -it -p 80:80/tcp --name teryt-frontend teryt-frontend:1.0.1
