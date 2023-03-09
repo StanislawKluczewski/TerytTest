@@ -1,55 +1,56 @@
 {
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5012"
+  },
   "Routes": [
     {
       "UpstreamPathTemplate": "/teryt/SIMC",
       "UpstreamHttpMethod": [ "Post" ],
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/SIMC",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
           "Port": 7069
         }
-      ],
-      "DownstreamPathTemplate": "/api/SIMC"
+      ]
     },
     {
-      "UpstreamPathTemplate": "/teryt/TERC",
+      "UpstreamPathTemplate": "/teryt/TERC/",
       "UpstreamHttpMethod": [ "Post" ],
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
+      "DownstreamPathTemplate": "/api/TERC",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
           "Port": 7069
         }
-      ],
-      "DownstreamPathTemplate": "/api/TERC"
+      ]
     },
     {
       "UpstreamPathTemplate": "/teryt/ULIC",
       "UpstreamHttpMethod": [ "Post" ],
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
+      "DownstreamPathTemplate": "/api/ULIC",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
           "Port": 7069
         }
-      ],
-      "DownstreamPathTemplate": "/api/ULIC"
+      ]
     },
     {
       "UpstreamPathTemplate": "/teryt/users",
       "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/users",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
           "Port": 3000
         }
-      ],
-      "DownstreamPathTemplate": "/users"
+      ]
     }
-  ],
-  "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:5000"
-  }
+  ]
+
 }

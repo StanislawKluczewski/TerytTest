@@ -45,7 +45,6 @@ namespace Teryt.WebApi.Authentication
                     return "User";
                 }
             }
-            return "Brak roli";
         }
     }
 }
