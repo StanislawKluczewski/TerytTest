@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Observable, retry } from "rxjs";
 import { HttpClient } from "@angular/common/http";
 import { environment } from "src/environments/environment.prod";
-import { TercList } from "./models/terc.model";
+import { TercList, Terc } from "./models/terc.model";
 import { HttpHeaders } from "@angular/common/http";
 
 @Injectable({
@@ -26,8 +26,8 @@ export class TercService {
     return this.http.post<TercList>(environment.url + "TERC/DajPowiatyWojewodztwie", voivodeshipId, this.httpOptions);
   }
 
-  getSingleCounty(object: any): Observable<TercList> {
-    return this.http.post<TercList>(environment.url + "TERC/DajPowiat", object, this.httpOptions);
+  getSingleCounty(object: any): Observable<Terc> {
+    return this.http.post<Terc>(environment.url + "TERC/DajPowiat", object, this.httpOptions);
   }
 
   getDeleganciesQuarters(): Observable<TercList> {

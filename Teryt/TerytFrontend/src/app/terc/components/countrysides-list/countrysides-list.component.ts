@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TercService } from '../../terc.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Terc } from '../../models/terc.model';
+
 
 @Component({
   selector: 'app-country-sides-list',
@@ -12,7 +12,10 @@ export class CountrySidesListComponent implements OnInit {
 
   dataSource!: any;
   counties!: any;
-  displayedColumns: string[] = ['Nazwa', 'Nazwa Terytorialna', 'Powiat ID', 'Wojewodztwo ID', 'Stan na'];
+  selectedCounty!: any;
+  selectedVoivodeship!: any;
+
+  displayedColumns: string[] = ['Nazwa', 'Nazwa Terytorialna', 'Stan na'];
   selected = new FormGroup({
     wojewodztwoId: new FormControl('', Validators.required),
     powiatId: new FormControl('', Validators.required)
@@ -40,6 +43,8 @@ export class CountrySidesListComponent implements OnInit {
   }
 
   getCoutryside(): void {
+    this.tercService.getSingleCounty(this.selected.value).subscribe(result => {
+    })
     this.tercService.getCoutrySides(this.selected.value).subscribe(result => {
       this.dataSource = result;
     })

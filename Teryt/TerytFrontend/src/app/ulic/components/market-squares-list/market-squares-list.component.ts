@@ -14,7 +14,7 @@ export class MarketSquaresListComponent implements OnInit {
 
   dataSource!: any;
   counties!: any;
-  displayedColumns: string[] = ['Nazwa', 'Nazwa dodatkowa', 'Wojewodztwo ID', 'Powiat ID', 'Gmina ID', 'Cecha', 'Stan na'];
+  displayedColumns: string[] = ['Nazwa', 'Nazwa dodatkowa', 'Cecha', 'Stan na'];
   selected = new FormGroup({
     wojewodztwoId: new FormControl('', Validators.required),
     powiatId: new FormControl('', Validators.required)

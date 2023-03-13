@@ -31,25 +31,13 @@
       <th mat-header-cell *matHeaderCellDef> Nazwa </th>
       <td mat-cell *matCellDef="let element"> {{element.nazwa}} </td>
     </ng-container>
-    <ng-container matColumnDef="Wojewodztwo ID">
-      <th mat-header-cell *matHeaderCellDef>Wojewodztwo ID</th>
-      <td mat-cell *matCellDef="let element"> {{element.wojewodztwoId}} </td>
-    </ng-container>
-    <ng-container matColumnDef="RodzGmina ID">
-      <th mat-header-cell *matHeaderCellDef>RodzGmina ID</th>
-      <td mat-cell *matCellDef="let element"> {{element.rodzGminaId}} </td>
-    </ng-container>
-    <ng-container matColumnDef="Gmina ID">
-      <th mat-header-cell *matHeaderCellDef>Gmina ID</th>
-      <td mat-cell *matCellDef="let element"> {{element.gminaId}} </td>
-    </ng-container>
-    <ng-container matColumnDef="Powiat ID">
-      <th mat-header-cell *matHeaderCellDef>Powiat ID</th>
-      <td mat-cell *matCellDef="let element"> {{element.powiatId}} </td>
+    <ng-container matColumnDef="RodzGmina">
+      <th mat-header-cell *matHeaderCellDef>RodzGmina</th>
+      <td mat-cell *matCellDef="let element"> {{element.rodzGminaId == 2 ? "gmina wiejska" : "obszar wiejski"}} </td>
     </ng-container>
     <ng-container matColumnDef="RM Numer">
       <th mat-header-cell *matHeaderCellDef>RM Numer</th>
-      <td mat-cell *matCellDef="let element"> {{element.rmNumer}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.rmNumer == 1 ? "wieś" : "kolonia"}} </td>
     </ng-container>
     <ng-container matColumnDef="Stan na">
       <th mat-header-cell *matHeaderCellDef> Stan na </th>
