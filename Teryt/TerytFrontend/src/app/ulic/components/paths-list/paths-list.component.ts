@@ -11,7 +11,7 @@ export class PathsListComponent implements OnInit {
   constructor(private ulicService: UlicService) { }
 
   dataSource!: any;
-  displayedColumns: string[] = ['Nazwa', 'Nazwa dodatkowa', 'Wojewodztwo ID', 'Powiat ID', 'Gmina ID', 'Cecha', 'Stan na'];
+  displayedColumns: string[] = ['Nazwa', 'Nazwa dodatkowa', 'Cecha', 'Stan na'];
 
   getAllVoivodeships(): void {
     this.ulicService.getPaths().subscribe(result => {

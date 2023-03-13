@@ -9,7 +9,7 @@ import { TercService } from '../../terc.service';
 export class DeleganciesQuartersListComponent implements OnInit {
 
   dataSource!: any;
-  displayedColumns: string[] = ['Nazwa', 'Nazwa Terytorialna', 'Powiat ID', 'Wojewodztwo ID', 'Stan na'];
+  displayedColumns: string[] = ['Nazwa', 'Nazwa Terytorialna', 'Stan na'];
 
   constructor(private tercService: TercService) { }
 

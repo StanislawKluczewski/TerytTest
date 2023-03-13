@@ -23,28 +23,14 @@
       <th mat-header-cell *matHeaderCellDef> Nazwa </th>
       <td mat-cell *matCellDef="let element"> {{element.nazwa}} </td>
     </ng-container>
-
-    <ng-container matColumnDef="Powiat ID">
-      <th mat-header-cell *matHeaderCellDef>Powiat ID</th>
-      <td mat-cell *matCellDef="let element"> {{element.powiatId}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="Wojewodztwo ID">
-      <th mat-header-cell *matHeaderCellDef>Wojewodztwo ID</th>
-      <td mat-cell *matCellDef="let element"> {{element.wojewodztwoId}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="Stan na">
-      <th mat-header-cell *matHeaderCellDef> Stan na </th>
-      <td mat-cell *matCellDef="let element"> {{element.stanNa | date:'yyyy-MM-dd'}} </td>
-    </ng-container>
-
     <ng-container matColumnDef="Nazwa Terytorialna">
       <th mat-header-cell *matHeaderCellDef> Nazwa Terytorialna </th>
       <td mat-cell *matCellDef="let element"> {{element.nazwaTerytorialna}} </td>
     </ng-container>
-
-
+    <ng-container matColumnDef="Stan na">
+      <th mat-header-cell *matHeaderCellDef> Stan na </th>
+      <td mat-cell *matCellDef="let element"> {{element.stanNa | date:'yyyy-MM-dd'}} </td>
+    </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>

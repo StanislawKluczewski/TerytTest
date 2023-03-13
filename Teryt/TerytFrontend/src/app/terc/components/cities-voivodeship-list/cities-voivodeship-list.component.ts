@@ -11,7 +11,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class CitiesVoivodeshipListComponent implements OnInit {
 
   dataSource!: any;
-  displayedColumns: string[] = ['Nazwa', 'Nazwa Terytorialna', 'Wojewodztwo ID', 'Stan na'];
+  displayedColumns: string[] = ['Nazwa', 'Nazwa Terytorialna','Stan na'];
   selectedVoivodeship = new FormGroup({
     wojewodztwoId: new FormControl('', Validators.required)
   });

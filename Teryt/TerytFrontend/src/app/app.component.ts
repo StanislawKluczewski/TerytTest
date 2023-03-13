@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
 import { CoreService } from './core/core.service';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ResponsiveWidthService } from './shared/responsiveness/responsive-screen-size.service';
+import { ResponsiveOrientationTypeDeviceService } from './shared/responsiveness/responsive-orientation-device-type.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -22,8 +26,9 @@ export class AppComponent {
     token: new FormControl('', Validators.email),
   });
 
-  constructor(private coreService: CoreService, private helper: JwtHelperService) {
+  constructor(private coreService: CoreService, private helper: JwtHelperService, private router: Router) {
     this.getEmailOfUser();
+
   }
 
   logout(): void {
@@ -32,8 +37,9 @@ export class AppComponent {
     this.coreService.logout(this.selected.value).subscribe(result => {
       localStorage.removeItem('token');
       window.location.reload();
-    });
 
+    });
+    this.router.navigateByUrl("/Start")
   }
 
   getEmailOfUser(): void {

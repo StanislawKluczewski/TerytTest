@@ -12,7 +12,7 @@ export class LocalitiesPartsListComponent implements OnInit {
 
   dataSource!: any;
   counties!: any;
-  displayedColumns: string[] = ['Nazwa', 'Wojewodztwo ID', 'RodzGmina ID', 'Gmina ID', 'Powiat ID', 'RM Numer', 'Stan na'];
+  displayedColumns: string[] = ['Nazwa', 'RodzGmina','RM Numer', 'Stan na'];
   selected = new FormGroup({
     wojewodztwoId: new FormControl('', Validators.required),
     powiatId: new FormControl('', Validators.required)
