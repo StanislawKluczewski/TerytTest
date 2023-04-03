@@ -163,6 +163,8 @@ mat-nav-list {
       width: 30px;
       font-size: 10px;
       margin-right: 0px;
+      margin-left: 2.5px;
+      margin-right: 2.5px;
     }
 
     .mat-icon {
@@ -207,6 +209,8 @@ mat-nav-list {
       height: 30px;
       width: 30px;
       font-size: 10px;
+      margin-left: 5px;
+      margin-right: 5px;
     }
 
     .mat-icon {
@@ -238,7 +242,7 @@ mat-nav-list {
     p {
       margin-left: 20px;
       letter-spacing: 0.14rem;
-      font-size: 0.9rem;
+      font-size: 1rem;
       padding-bottom: 0px;
       margin-bottom: 0px;
     }
@@ -249,6 +253,8 @@ mat-nav-list {
       height: 30px;
       width: 30px;
       font-size: 10px;
+      margin-left: 5px;
+      margin-right: 5px;
     }
 
     .mat-icon {
@@ -273,30 +279,53 @@ mat-nav-list {
     text-align: center;
   }
 
+  mat-toolbar-row {
+    h1 {
+      font-size: 1.4rem;
+    }
+  }
+
   mat-sidenav {
     text-align: center;
 
     p {
       margin-left: 20px;
       letter-spacing: 0.14rem;
-      font-size: 0.95rem;
-      padding-bottom: 10px;
-      margin-bottom: 10px;
+      font-size: 1.04rem;
+    }
+
+    button {
+      margin-left: 5px;
+      margin-right: 5px;
     }
 
   }
+
+
 
   .mat-icon-button {
     height: 30px;
     width: 30px;
     font-size: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
   .mat-icon {
     height: 20px;
     width: 20px;
-    padding-bottom: 15px;
     font-size: 20px;
+  }
+
+  .horizontal-icon {
+    color: whitesmoke;
+  }
+
+  .horizontal-icon:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: whitesmoke;
+    color: black;
   }
 
   h1 {
@@ -321,13 +350,16 @@ mat-nav-list {
       margin-left: 20px;
       letter-spacing: 0.14rem;
       font-size: 1.2rem;
-      padding-bottom: 10px;
-      margin-bottom: 10px;
     }
 
     mat-list-item a {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
+  }
+
+  .header-button {
+    padding-top: 10px;
+    margin-top: 10px;
   }
 
   .mat-icon-button {
@@ -337,9 +369,8 @@ mat-nav-list {
   }
 
   .mat-icon {
-    height: 30px;
-    width: 30px;
-    padding-bottom: 10px;
+    height: 20px;
+    width: 20px;
     font-size: 20px;
   }
 
@@ -362,17 +393,25 @@ mat-nav-list {
     p {
       margin-left: 20px;
       letter-spacing: 0.14rem;
-      font-size: 1.6rem;
-      padding-bottom: 15px;
-      margin-bottom: 15px;
+      font-size: 1.2rem;
     }
   }
 
   h1 {
-    font-size: 50px;
+    font-size: 40px;
     letter-spacing: 0.09rem;
   }
 
+  header-button {
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+
+  .mat-icon-button {
+    height: 30px;
+    width: 30px;
+    font-size: 10px;
+  }
 
 
   mat-toolbar-row {
@@ -408,9 +447,11 @@ mat-nav-list {
     p {
       margin-left: 20px;
       letter-spacing: 0.14rem;
-      font-size: 1.6rem;
-      padding-bottom: 15px;
-      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+
+    mat-list-item a {
+      font-size: 1.1rem;
     }
   }
 
@@ -438,8 +479,25 @@ mat-nav-list {
     }
 
     p {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
+  }
+
+  .header-button {
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+
+  .mat-icon-button {
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+  }
+
+  .mat-icon {
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
   }
 
   footer {
@@ -447,7 +505,6 @@ mat-nav-list {
   }
 }
 
-
 @media only screen and (min-width: 900px) {
 
   mat-sidenav {
@@ -456,13 +513,12 @@ mat-nav-list {
     p {
       margin-left: 20px;
       letter-spacing: 0.14rem;
-      font-size: 1.7rem;
-      padding-bottom: 15px;
-      margin-bottom: 15px;
+      font-size: 1.5rem;
     }
 
     mat-list-item a {
-      font-size: 1.6rem;
+      font-size: 1.2rem;
+      font-weight: 200;
     }
   }
 
@@ -473,71 +529,23 @@ mat-nav-list {
 
   mat-toolbar-row {
     .mat-icon-button {
-      height: 50px;
-      width: 50px;
+      height: 40px;
+      width: 40px;
     }
 
     .mat-icon {
-      height: 50px;
-      width: 50px;
+      height: 40px;
+      width: 40px;
       font-size: 30px;
-      padding-top: 15px;
+    }
+
+    h1 {
+      font-size: 45spx;
+    }
+
+    p {
+      font-size: 1.1rem;
       padding-bottom: 5px;
-    }
-
-    h1 {
-      font-size: 2rem;
-    }
-
-    p {
-      font-size: 1.2rem;
-    }
-  }
-}
-
-@media only screen and (min-width: 900px) {
-
-  mat-sidenav {
-    text-align: center;
-
-    p {
-      margin-left: 20px;
-      letter-spacing: 0.14rem;
-      font-size: 1.7rem;
-      padding-bottom: 15px;
-      margin-bottom: 15px;
-    }
-
-    mat-list-item a {
-      font-size: 1.6rem;
-    }
-  }
-
-  h1 {
-    font-size: 50px;
-    letter-spacing: 0.09rem;
-  }
-
-  mat-toolbar-row {
-    .mat-icon-button {
-      height: 50px;
-      width: 50px;
-    }
-
-    .mat-icon {
-      height: 50px;
-      width: 50px;
-      font-size: 30px;
-      padding-top: 15px;
-      padding-bottom: 20px;
-    }
-
-    h1 {
-      font-size: 2rem;
-    }
-
-    p {
-      font-size: 1.2rem;
     }
   }
 }
@@ -550,6 +558,8 @@ mat-nav-list {
     p {
       letter-spacing: 0.14rem;
       font-size: 1.1rem;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
     }
 
     mat-list-item a {
@@ -559,8 +569,7 @@ mat-nav-list {
     }
 
     .nav-header {
-      padding-bottom: 0px;
-      margin-bottom: 0px;
+      margin-bottom: 10px;
     }
   }
 
@@ -568,23 +577,25 @@ mat-nav-list {
     background-color: black;
     color: whitesmoke;
     border-bottom: 1px solid purple;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: space-between;
 
     .mat-icon-button {
-      height: 45px;
-      width: 45px;
-      font-size: 10px;
+      height: 50px;
+      width: 50px;
+      font-size: 15px;
       margin-right: 5px;
       margin-left: 5px;
+      margin-bottom: 5px;
+      margin-bottom: 5px;
     }
 
     .mat-icon {
-      height: 30px;
-      width: 30px;
-      padding-bottom: 15px;
+      height: 35px;
+      width: 35px;
       font-size: 25px;
-
     }
 
 
@@ -632,8 +643,9 @@ mat-nav-list {
 
   .horizontal-icon {
     color: whitesmoke;
+    margin-top: 5px;
     height: 10px;
-    margin-bottom: 25px;
+    width: 20px;
   }
 
 
@@ -645,7 +657,7 @@ mat-nav-list {
   }
 
   footer {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
 
 }
