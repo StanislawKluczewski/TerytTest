@@ -14,6 +14,6 @@
   <span>Oficjalny rejestr prowadzony przez GUS znajduję się:
     <a href="https://eteryt.stat.gov.pl">eteryt.stat</a>
   </span>
-  <h2><a [routerLink]="['/Start/Log-in']">Zaloguj się</a> w celu korzystania aplikacji Teryt. Nie masz konta? <a
-      [routerLink]="['/Start/Log-in']">Zarejestruj się.</a></h2>
+  <h2 *ngIf="!this.isLogged"><a [routerLink]="['/Start/Log-in']">Zaloguj się</a> w celu korzystania aplikacji Teryt. Nie
+    masz konta? <a [routerLink]="['/Start/Log-in']">Zarejestruj się.</a></h2>
 </div>
