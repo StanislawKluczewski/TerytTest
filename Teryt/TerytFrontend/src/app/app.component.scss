@@ -14,6 +14,10 @@ mat-side-content {
   align-items: center;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 mat-toolbar-row {
   background-color: black;
   color: whitesmoke;
@@ -141,9 +145,6 @@ mat-nav-list {
 }
 
 @media only screen and (min-width: 200px) {
-  mat-sidenav-content {
-    text-align: center;
-  }
 
   mat-sidenav {
     width: 100%;
@@ -155,6 +156,7 @@ mat-nav-list {
       padding-bottom: 0px;
       margin-bottom: 0px;
     }
+
   }
 
   mat-toolbar-row {
@@ -188,9 +190,6 @@ mat-nav-list {
 }
 
 @media only screen and (min-width: 300px) {
-  mat-sidenav-content {
-    text-align: center;
-  }
 
   mat-sidenav {
     width: 100%;
@@ -202,7 +201,10 @@ mat-nav-list {
       padding-bottom: 0px;
       margin-bottom: 0px;
     }
+
   }
+
+
 
   mat-toolbar-row {
     .mat-icon-button {
@@ -231,9 +233,7 @@ mat-nav-list {
 }
 
 @media only screen and (min-width: 400px) {
-  mat-sidenav-content {
-    text-align: center;
-  }
+
 
 
   mat-sidenav {
@@ -275,9 +275,6 @@ mat-nav-list {
 }
 
 @media only screen and (min-width: 500px) {
-  mat-sidenav-content {
-    text-align: center;
-  }
 
   mat-toolbar-row {
     h1 {
@@ -339,12 +336,8 @@ mat-nav-list {
 
 
 @media only screen and (min-width: 600px) {
-  mat-sidenav-content {
-    text-align: center;
-  }
 
   mat-sidenav {
-    text-align: center;
 
     p {
       margin-left: 20px;
@@ -388,7 +381,6 @@ mat-nav-list {
 @media only screen and (min-width: 700px) {
 
   mat-sidenav {
-    text-align: center;
 
     p {
       margin-left: 20px;
@@ -402,7 +394,7 @@ mat-nav-list {
     letter-spacing: 0.09rem;
   }
 
-  header-button {
+  .header-button {
     padding-top: 10px;
     margin-top: 10px;
   }
@@ -558,12 +550,9 @@ mat-nav-list {
     p {
       letter-spacing: 0.14rem;
       font-size: 1.1rem;
-      padding-bottom: 0px;
-      margin-bottom: 0px;
     }
 
     mat-list-item a {
-      text-align: left;
       font-size: 0.9rem;
       margin-right: 5px;
     }
@@ -583,8 +572,8 @@ mat-nav-list {
     justify-content: space-between;
 
     .mat-icon-button {
-      height: 50px;
-      width: 50px;
+      height: 40px;
+      width: 40px;
       font-size: 15px;
       margin-right: 5px;
       margin-left: 5px;
@@ -599,13 +588,15 @@ mat-nav-list {
     }
 
 
+
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       letter-spacing: 0.09rem;
     }
 
     p {
-      font-size: 0.9rem;
+      font-size: 1rem;
+      padding-bottom: 15px;
     }
   }
 
@@ -644,8 +635,9 @@ mat-nav-list {
   .horizontal-icon {
     color: whitesmoke;
     margin-top: 5px;
-    height: 10px;
+    height: 20px;
     width: 20px;
+    margin-bottom: 5px;
   }
 
 
