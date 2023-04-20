@@ -11,7 +11,7 @@ export class DistrictsListComponent implements OnInit {
 
   dataSource!: any;
   counties!: any;
-  displayedColumns: string[] = ['Nazwa', 'Nazwa Terytorialna', 'Powiat ID', 'Wojewodztwo ID', 'Stan na'];
+  displayedColumns: string[] = ['Nazwa', 'Nazwa Terytorialna', 'Stan na'];
   selected = new FormGroup({
     wojewodztwoId: new FormControl('', Validators.required),
     powiatId: new FormControl('', Validators.required)

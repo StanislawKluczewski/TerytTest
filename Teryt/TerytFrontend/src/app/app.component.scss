@@ -8,18 +8,22 @@ mat-sidenav {
   color: whitesmoke;
 }
 
+mat-side-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
 mat-toolbar-row {
   background-color: black;
   color: whitesmoke;
   border-bottom: 1px solid purple;
   display: flex;
   justify-content: space-between;
-}
-
-mat-side-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 button {
@@ -114,6 +118,7 @@ mat-nav-list {
   color: whitesmoke;
 }
 
+
 .horizontal-icon:hover {
   cursor: pointer;
   transition: 0.3s;
@@ -137,4 +142,514 @@ mat-nav-list {
 .user-panel p {
   margin-right: 5px;
   padding-bottom: 10px;
+}
+
+@media only screen and (min-width: 200px) {
+
+  mat-sidenav {
+    width: 100%;
+
+    p {
+      margin-left: 20px;
+      letter-spacing: 0.14rem;
+      font-size: 0.8rem;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    }
+
+  }
+
+  mat-toolbar-row {
+    .mat-icon-button {
+      height: 30px;
+      width: 30px;
+      font-size: 10px;
+      margin-right: 0px;
+      margin-left: 2.5px;
+      margin-right: 2.5px;
+    }
+
+    .mat-icon {
+      height: 20px;
+      width: 15px;
+      padding-bottom: 15px;
+      font-size: 15px;
+
+    }
+
+    h1 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.6rem;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+}
+
+@media only screen and (min-width: 300px) {
+
+  mat-sidenav {
+    width: 100%;
+
+    p {
+      margin-left: 20px;
+      letter-spacing: 0.14rem;
+      font-size: 0.8rem;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    }
+
+  }
+
+
+
+  mat-toolbar-row {
+    .mat-icon-button {
+      height: 30px;
+      width: 30px;
+      font-size: 10px;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .mat-icon {
+      height: 20px;
+      width: 20px;
+      padding-bottom: 15px;
+      font-size: 20px;
+    }
+
+    h1 {
+      font-size: 1.1rem;
+    }
+
+    p {
+      font-size: 0.65rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 400px) {
+
+
+
+  mat-sidenav {
+    width: 100%;
+
+    p {
+      margin-left: 20px;
+      letter-spacing: 0.14rem;
+      font-size: 1rem;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    }
+  }
+
+  mat-toolbar-row {
+    .mat-icon-button {
+      height: 30px;
+      width: 30px;
+      font-size: 10px;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .mat-icon {
+      height: 20px;
+      width: 20px;
+      padding-bottom: 15px;
+      font-size: 20px;
+    }
+
+    h1 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.75rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 500px) {
+
+  mat-toolbar-row {
+    h1 {
+      font-size: 1.4rem;
+    }
+  }
+
+  mat-sidenav {
+    text-align: center;
+
+    p {
+      margin-left: 20px;
+      letter-spacing: 0.14rem;
+      font-size: 1.04rem;
+    }
+
+    button {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+  }
+
+
+
+  .mat-icon-button {
+    height: 30px;
+    width: 30px;
+    font-size: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .mat-icon {
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
+  }
+
+  .horizontal-icon {
+    color: whitesmoke;
+  }
+
+  .horizontal-icon:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: whitesmoke;
+    color: black;
+  }
+
+  h1 {
+    font-size: 0.8rem;
+  }
+
+  p {
+    font-size: 10px;
+  }
+}
+
+
+@media only screen and (min-width: 600px) {
+
+  mat-sidenav {
+
+    p {
+      margin-left: 20px;
+      letter-spacing: 0.14rem;
+      font-size: 1.2rem;
+    }
+
+    mat-list-item a {
+      font-size: 1rem;
+    }
+  }
+
+  .header-button {
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+
+  .mat-icon-button {
+    height: 30px;
+    width: 30px;
+    font-size: 10px;
+  }
+
+  .mat-icon {
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 10px;
+  }
+
+}
+
+
+@media only screen and (min-width: 700px) {
+
+  mat-sidenav {
+
+    p {
+      margin-left: 20px;
+      letter-spacing: 0.14rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  h1 {
+    font-size: 40px;
+    letter-spacing: 0.09rem;
+  }
+
+  .header-button {
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+
+  .mat-icon-button {
+    height: 30px;
+    width: 30px;
+    font-size: 10px;
+  }
+
+
+  mat-toolbar-row {
+    .mat-icon-button {
+      height: 40px;
+      width: 40px;
+    }
+
+    .mat-icon {
+      height: 40px;
+      width: 40px;
+      font-size: 25px;
+      padding-top: 10px;
+      padding-bottom: 5px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 800px) {
+
+  mat-sidenav {
+    text-align: center;
+
+    p {
+      margin-left: 20px;
+      letter-spacing: 0.14rem;
+      font-size: 1.3rem;
+    }
+
+    mat-list-item a {
+      font-size: 1.1rem;
+    }
+  }
+
+  h1 {
+    font-size: 50px;
+    letter-spacing: 0.09rem;
+  }
+
+  mat-toolbar-row {
+    .mat-icon-button {
+      height: 40px;
+      width: 40px;
+    }
+
+    .mat-icon {
+      height: 40px;
+      width: 40px;
+      font-size: 25px;
+      padding-top: 10px;
+      padding-bottom: 5px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .header-button {
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+
+  .mat-icon-button {
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+  }
+
+  .mat-icon {
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
+  }
+
+  footer {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+
+  mat-sidenav {
+    text-align: center;
+
+    p {
+      margin-left: 20px;
+      letter-spacing: 0.14rem;
+      font-size: 1.5rem;
+    }
+
+    mat-list-item a {
+      font-size: 1.2rem;
+      font-weight: 200;
+    }
+  }
+
+  h1 {
+    font-size: 50px;
+    letter-spacing: 0.09rem;
+  }
+
+  mat-toolbar-row {
+    .mat-icon-button {
+      height: 40px;
+      width: 40px;
+    }
+
+    .mat-icon {
+      height: 40px;
+      width: 40px;
+      font-size: 30px;
+    }
+
+    h1 {
+      font-size: 45spx;
+    }
+
+    p {
+      font-size: 1.1rem;
+      padding-bottom: 5px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+
+  mat-sidenav {
+    width: 200px;
+
+    p {
+      letter-spacing: 0.14rem;
+      font-size: 1.1rem;
+    }
+
+    mat-list-item a {
+      font-size: 0.9rem;
+      margin-right: 5px;
+    }
+
+    .nav-header {
+      margin-bottom: 10px;
+    }
+  }
+
+  mat-toolbar-row {
+    background-color: black;
+    color: whitesmoke;
+    border-bottom: 1px solid purple;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .mat-icon-button {
+      height: 40px;
+      width: 40px;
+      font-size: 15px;
+      margin-right: 5px;
+      margin-left: 5px;
+      margin-bottom: 5px;
+      margin-bottom: 5px;
+    }
+
+    .mat-icon {
+      height: 35px;
+      width: 35px;
+      font-size: 25px;
+    }
+
+
+
+    h1 {
+      font-size: 1.7rem;
+      letter-spacing: 0.09rem;
+    }
+
+    p {
+      font-size: 1rem;
+      padding-bottom: 15px;
+    }
+  }
+
+
+  p {
+    letter-spacing: 0.12rem;
+    font-size: 0.9rem;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+
+  mat-list-item a {
+    text-decoration: none;
+    font-size: 0.75rem;
+    color: whitesmoke;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    letter-spacing: 0.09rem;
+    font-weight: 300;
+  }
+
+  mat-list-item a:hover {
+    transition: 0.4s;
+    color: rgb(187, 17, 187);
+    border-bottom: 1px solid purple;
+    border-top: 1px solid purple;
+  }
+
+  span {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .horizontal-icon {
+    color: whitesmoke;
+    margin-top: 5px;
+    height: 20px;
+    width: 20px;
+    margin-bottom: 5px;
+  }
+
+
+  .horizontal-icon:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: whitesmoke;
+    color: black;
+  }
+
+  footer {
+    font-size: 1.1rem;
+  }
+
 }

@@ -51,3 +51,193 @@ mat-form-field {
 .form-container {
   margin-top: 10px;
 }
+
+
+@media only screen and (min-width: 200px) {
+  table {
+    width: 25%;
+  }
+
+  .form-container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1rem;
+  }
+
+  strong {
+    font-size: 0.7rem;
+    margin-top: 5px;
+  }
+
+  mat-form-field {
+    margin-top: 10px;
+  }
+
+  th.mat-header-cell {
+    font-size: 10px;
+    margin: 0px;
+    text-align: center;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  td,
+  th {
+    font-size: 10px;
+  }
+
+  mat-toolbar-row {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 12px;
+  }
+
+  mat-form-field {
+    font-size: 0.8rem;
+  }
+
+  button {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  table {
+    width: 65%;
+  }
+
+  th.mat-header-cell {
+    font-size: 15px;
+    margin: 0px;
+    text-align: center;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  td,
+  th {
+    font-size: 12px;
+  }
+
+  mat-toolbar-row {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 10px;
+  }
+
+  mat-form-field {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+
+  strong {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  table {
+    width: 70%;
+  }
+
+  th.mat-header-cell {
+    font-size: 15px;
+    margin: 0px;
+    text-align: center;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .form-container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1rem;
+  }
+
+  strong {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+
+  mat-form-field {
+    font-size: 0.9rem;
+  }
+
+  td,
+  th {
+    font-size: 15px;
+  }
+
+  mat-toolbar-row {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 15px;
+  }
+
+  button {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  table {
+    margin-top: 10px;
+    width: 50%;
+  }
+
+  th.mat-header-cell {
+    font-size: 20px;
+    margin: 0px;
+    text-align: center;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+
+  .form-container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 1.1rem;
+  }
+
+  strong {
+    font-size: 1.2rem;
+  }
+
+  mat-form-field {
+    font-size: 1.1rem;
+  }
+
+  td,
+  th {
+    font-size: 15px;
+  }
+
+  mat-toolbar-row {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.1rem;
+  }
+
+  button {
+    font-size: 1.2rem;
+  }
+}

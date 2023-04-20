@@ -10,7 +10,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class ParksListComponent implements OnInit {
 
   dataSource!: any;
-  displayedColumns: string[] = ['Nazwa', 'Nazwa dodatkowa', 'Wojewodztwo ID', 'Powiat ID', 'Gmina ID', 'Cecha', 'Nazwa SIMC', 'Stan na'];
+  displayedColumns: string[] = ['Nazwa', 'Nazwa dodatkowa', 'Cecha', 'Nazwa SIMC', 'Stan na'];
   selected = new FormGroup({
     wojewodztwoId: new FormControl('', Validators.required)
   });

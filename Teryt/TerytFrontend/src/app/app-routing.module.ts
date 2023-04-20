@@ -25,7 +25,7 @@ import { LogInComponent } from './core/components/log-in/log-in.component';
 import { SignUpComponent } from './core/components/sign-up/sign-up.component';
 
 const routes: Routes = [
-  { path: "", component: VoivodeshipsComponent },
+  { path: "", component: LogInComponent },
   { path: "Start", component: HomeComponent },
   { path: "Start/Sign-in", component: SignUpComponent },
   { path: "Start/Log-in", component: LogInComponent },

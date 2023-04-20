@@ -222,3 +222,12 @@ C:\Users\klucz\OneDrive\Pulpit\Stasiu\Github\Teryt\Teryt\Teryt\src\Teryt.WebApi\
 C:\Users\klucz\OneDrive\Pulpit\Stasiu\Github\Teryt\Teryt\Teryt\src\Teryt.WebApi\bin\Debug\net6.0\NLog.Database.dll
 C:\Users\klucz\OneDrive\Pulpit\Stasiu\Github\Teryt\Teryt\Teryt\src\Teryt.WebApi\bin\Debug\net6.0\nlog.config
 C:\Users\klucz\OneDrive\Pulpit\Stasiu\Github\Teryt\Teryt\Teryt\src\Teryt.WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\klucz\OneDrive\Pulpit\Stasiu\Github\Teryt\Teryt\Teryt\src\Teryt.WebApi\bin\Debug\net6.0\ocelot.json
+C:\Users\klucz\OneDrive\Pulpit\Stasiu\Github\Teryt\Teryt\Teryt\src\Teryt.WebApi\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\klucz\OneDrive\Pulpit\Stasiu\Github\Teryt\Teryt\Teryt\src\Teryt.WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\klucz\OneDrive\Pulpit\Stasiu\Github\Teryt\Teryt\Teryt\src\Teryt.WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.MiddlewareAnalysis.dll
+C:\Users\klucz\OneDrive\Pulpit\Stasiu\Github\Teryt\Teryt\Teryt\src\Teryt.WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\klucz\OneDrive\Pulpit\Stasiu\Github\Teryt\Teryt\Teryt\src\Teryt.WebApi\bin\Debug\net6.0\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\klucz\OneDrive\Pulpit\Stasiu\Github\Teryt\Teryt\Teryt\src\Teryt.WebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\klucz\OneDrive\Pulpit\Stasiu\Github\Teryt\Teryt\Teryt\src\Teryt.WebApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\klucz\OneDrive\Pulpit\Stasiu\Github\Teryt\Teryt\Teryt\src\Teryt.WebApi\bin\Debug\net6.0\Ocelot.dll

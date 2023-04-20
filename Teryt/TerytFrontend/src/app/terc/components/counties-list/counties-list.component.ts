@@ -11,11 +11,11 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class CountiesListComponent implements OnInit {
 
   dataSource!: any;
-  displayedColumns: string[] = ['Nazwa', 'Nazwa Terytorialna','Powiat ID' ,'Wojewodztwo ID', 'Stan na'];
+  displayedColumns: string[] = ['Nazwa', 'Nazwa Terytorialna','Stan na'];
   selectedVoivodeship = new FormGroup({
     wojewodztwoId: new FormControl('', Validators.required)
   });
-  
+
   voivodeships = [
     { value: 2, viewValue: 'Dolnośląskie' },
     { value: 4, viewValue: 'Kujawsko-Pomorskie' },

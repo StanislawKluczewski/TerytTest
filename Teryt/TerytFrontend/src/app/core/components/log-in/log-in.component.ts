@@ -26,7 +26,7 @@ export class LogInComponent implements OnInit {
       localStorage.setItem('token', result);
       window.location.reload();
     });
-    this.router.navigateByUrl("/");
+    this.router.navigateByUrl("/TERC/DajWojewodztwa");
 
   }
 

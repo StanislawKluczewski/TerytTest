@@ -1,7 +1,7 @@
 <mat-toolbar>
   <mat-toolbar-row>
     <span>
-      <button mat-icon-button (click)="opened=!opened">
+      <button mat-icon-button (click)="opened=!opened" *ngIf="this.userIsLogged">
         <mat-icon>menu</mat-icon>
       </button>
       <a mat-list-item [routerLink]="['/Start']">
@@ -32,7 +32,7 @@
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-sidenav-container>
-  <mat-sidenav [(opened)]="opened" mode="side">
+  <mat-sidenav [(opened)]="opened" mode="side" *ngIf="this.userIsLogged">
     <div class="nav-header">
       <p>TERC</p>
       <button class="header-button">

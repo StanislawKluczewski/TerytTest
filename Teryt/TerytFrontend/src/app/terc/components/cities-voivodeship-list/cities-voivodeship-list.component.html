@@ -15,10 +15,6 @@
       <th mat-header-cell *matHeaderCellDef> Nazwa </th>
       <td mat-cell *matCellDef="let element"> {{element.nazwa}} </td>
     </ng-container>
-    <ng-container matColumnDef="Wojewodztwo ID">
-      <th mat-header-cell *matHeaderCellDef>Wojewodztwo ID</th>
-      <td mat-cell *matCellDef="let element"> {{element.wojewodztwoId}} </td>
-    </ng-container>
     <ng-container matColumnDef="Stan na">
       <th mat-header-cell *matHeaderCellDef> Stan na </th>
       <td mat-cell *matCellDef="let element"> {{element.stanNa | date:'yyyy-MM-dd'}} </td>

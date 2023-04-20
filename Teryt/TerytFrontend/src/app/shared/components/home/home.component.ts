@@ -9,7 +9,19 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  isLogged: boolean = false;
+  getUserIsLogged(): boolean {
+    const token = localStorage.getItem('token');
+    if (token) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   ngOnInit(): void {
+    this.isLogged = this.getUserIsLogged();
+    console.log(this.isLogged);
   }
 
 }
