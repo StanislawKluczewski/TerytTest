@@ -29,10 +29,10 @@ namespace Teryt.WebApi.Controllers
                 var accessToken = Request.Headers["authorization"].ToString().Replace("Bearer ", "");
                 var userAuth = UserAuthenticationCheck.IsUserAuthenticated(accessToken);
                 var userRole = UserAuthenticationCheck.UserRoleCheck(accessToken);
-                if (userAuth == false && (userRole != "Admin" || userRole != "User"))
-                {
-                    throw new Exception("Unauthorized");
-                }
+                //if (userAuth == false && (userRole != "Admin" || userRole != "User"))
+                //{
+                //    throw new Exception("Unauthorized");
+                //}
                 if (command is null)
                 {
                     throw new Exception("Not Found");
@@ -53,10 +53,10 @@ namespace Teryt.WebApi.Controllers
                 {
                     return BadRequest("Something went wrong. Yours typeof command class is not GetVoivodeshipsCommand type. Plese check you request.");
                 }
-                else if (ex.Message == "Unauthorized")
-                {
-                    return Unauthorized("You have to be logged in to use this action.");
-                }
+                //else if (ex.Message == "Unauthorized")
+                //{
+                //    return Unauthorized("You have to be logged in to use this action.");
+                //}
                 else
                 {
                     return StatusCode(StatusCodes.Status500InternalServerError);
@@ -74,10 +74,10 @@ namespace Teryt.WebApi.Controllers
                 var accessToken = Request.Headers["authorization"].ToString().Replace("Bearer ", "");
                 var userAuth = UserAuthenticationCheck.IsUserAuthenticated(accessToken);
                 var userRole = UserAuthenticationCheck.UserRoleCheck(accessToken);
-                if (userAuth == false && (userRole != "Admin" || userRole != "User"))
-                {
-                    throw new Exception("Unauthorized");
-                }
+                //if (userAuth == false && (userRole != "Admin" || userRole != "User"))
+                //{
+                //    throw new Exception("Unauthorized");
+                //}
                 if (command is null)
                 {
                     throw new Exception("Not Found");
@@ -98,10 +98,10 @@ namespace Teryt.WebApi.Controllers
                 {
                     return BadRequest("Something went wrong. Yours typeof command class is not GetVoivodeshipByIdCommand type. Plese check you request.");
                 }
-                else if (ex.Message == "Unauthorized")
-                {
-                    return Unauthorized("You have to be logged in to use this action.");
-                }
+                //else if (ex.Message == "Unauthorized")
+                //{
+                //    return Unauthorized("You have to be logged in to use this action.");
+                //}
                 else
                 {
                     return StatusCode(StatusCodes.Status500InternalServerError);
@@ -121,10 +121,10 @@ namespace Teryt.WebApi.Controllers
                 var accessToken = Request.Headers["authorization"].ToString().Replace("Bearer ", "");
                 var userAuth = UserAuthenticationCheck.IsUserAuthenticated(accessToken);
                 var userRole = UserAuthenticationCheck.UserRoleCheck(accessToken);
-                if (userAuth == false && (userRole != "Admin" || userRole != "User"))
-                {
-                    throw new Exception("Unauthorized");
-                }
+                //if (userAuth == false && (userRole != "Admin" || userRole != "User"))
+                //{
+                //    throw new Exception("Unauthorized");
+                //}
                 if (command is null)
                 {
                     throw new Exception("Not Found");
@@ -145,10 +145,10 @@ namespace Teryt.WebApi.Controllers
                 {
                     return BadRequest("Something went wrong. Yours typeof command class is not GetCititesInVoivodeshipByIdCommand type. Plese check you request.");
                 }
-                else if (ex.Message == "Unauthorized")
-                {
-                    return Unauthorized("You have to be logged in to use this action.");
-                }
+                //else if (ex.Message == "Unauthorized")
+                //{
+                //    return Unauthorized("You have to be logged in to use this action.");
+                //}
                 else
                 {
                     return StatusCode(StatusCodes.Status500InternalServerError);
@@ -166,10 +166,10 @@ namespace Teryt.WebApi.Controllers
                 var accessToken = Request.Headers["authorization"].ToString().Replace("Bearer ", "");
                 var userAuth = UserAuthenticationCheck.IsUserAuthenticated(accessToken);
                 var userRole = UserAuthenticationCheck.UserRoleCheck(accessToken);
-                if (userAuth == false && (userRole != "Admin" || userRole != "User"))
-                {
-                    throw new Exception("Unauthorized");
-                }
+                //if (userAuth == false && (userRole != "Admin" || userRole != "User"))
+                //{
+                //    throw new Exception("Unauthorized");
+                //}
                 if (command is null)
                 {
                     throw new Exception("Not Found");
@@ -190,10 +190,10 @@ namespace Teryt.WebApi.Controllers
                 {
                     return BadRequest("Something went wrong. Yours typeof command class is not GetCountiesInVoivodeshipByIdCommand type. Plese check you request.");
                 }
-                else if (ex.Message == "Unauthorized")
-                {
-                    return Unauthorized("You have to be logged in to use this action.");
-                }
+                //else if (ex.Message == "Unauthorized")
+                //{
+                //    return Unauthorized("You have to be logged in to use this action.");
+                //}
                 else
                 {
                     return StatusCode(StatusCodes.Status500InternalServerError);
@@ -211,10 +211,10 @@ namespace Teryt.WebApi.Controllers
                 var accessToken = Request.Headers["authorization"].ToString().Replace("Bearer ", "");
                 var userAuth = UserAuthenticationCheck.IsUserAuthenticated(accessToken);
                 var userRole = UserAuthenticationCheck.UserRoleCheck(accessToken);
-                if (userAuth == false && (userRole != "Admin" || userRole != "User"))
-                {
-                    throw new Exception("Unauthorized");
-                }
+                //if (userAuth == false && (userRole != "Admin" || userRole != "User"))
+                //{
+                //    throw new Exception("Unauthorized");
+                //}
                 if (command is null)
                 {
                     throw new Exception("Not Found");
@@ -235,10 +235,10 @@ namespace Teryt.WebApi.Controllers
                 {
                     return BadRequest("Something went wrong. Yours typeof command class is not GetCountyByIdCommand type. Plese check you request.");
                 }
-                else if (ex.Message == "Unauthorized")
-                {
-                    return Unauthorized("You have to be logged in to use this action.");
-                }
+                //else if (ex.Message == "Unauthorized")
+                //{
+                //    return Unauthorized("You have to be logged in to use this action.");
+                //}
                 else
                 {
                     return StatusCode(StatusCodes.Status500InternalServerError);
@@ -256,10 +256,10 @@ namespace Teryt.WebApi.Controllers
                 var accessToken = Request.Headers["authorization"].ToString().Replace("Bearer ", "");
                 var userAuth = UserAuthenticationCheck.IsUserAuthenticated(accessToken);
                 var userRole = UserAuthenticationCheck.UserRoleCheck(accessToken);
-                if (userAuth == false && (userRole != "Admin" || userRole != "User"))
-                {
-                    throw new Exception("Unauthorized");
-                }
+                //if (userAuth == false && (userRole != "Admin" || userRole != "User"))
+                //{
+                //    throw new Exception("Unauthorized");
+                //}
                 if (command is null)
                 {
                     throw new Exception("Not Found");
@@ -280,10 +280,10 @@ namespace Teryt.WebApi.Controllers
                 {
                     return BadRequest("Something went wrong. Yours typeof command class is not GetDistrictsByIdCommand type. Plese check you request.");
                 }
-                else if (ex.Message == "Unauthorized")
-                {
-                    return Unauthorized("You have to be logged in to use this action.");
-                }
+                //else if (ex.Message == "Unauthorized")
+                //{
+                //    return Unauthorized("You have to be logged in to use this action.");
+                //}
                 else
                 {
                     return StatusCode(StatusCodes.Status500InternalServerError);
@@ -301,10 +301,10 @@ namespace Teryt.WebApi.Controllers
                 var accessToken = Request.Headers["authorization"].ToString().Replace("Bearer ", "");
                 var userAuth = UserAuthenticationCheck.IsUserAuthenticated(accessToken);
                 var userRole = UserAuthenticationCheck.UserRoleCheck(accessToken);
-                if (userAuth == false && (userRole != "Admin" || userRole != "User"))
-                {
-                    throw new Exception("Unauthorized");
-                }
+                //if (userAuth == false && (userRole != "Admin" || userRole != "User"))
+                //{
+                //    throw new Exception("Unauthorized");
+                //}
                 if (command is null)
                 {
                     throw new Exception("Not Found");
@@ -325,10 +325,10 @@ namespace Teryt.WebApi.Controllers
                 {
                     return BadRequest("Something went wrong. Yours typeof command class is not GetDeleganciesAndQuartersCommand type. Plese check you request.");
                 }
-                else if (ex.Message == "Unauthorized")
-                {
-                    return Unauthorized("You have to be logged in to use this action.");
-                }
+                //else if (ex.Message == "Unauthorized")
+                //{
+                //    return Unauthorized("You have to be logged in to use this action.");
+                //}
                 else
                 {
                     return StatusCode(StatusCodes.Status500InternalServerError);
@@ -346,10 +346,10 @@ namespace Teryt.WebApi.Controllers
                 var accessToken = Request.Headers["authorization"].ToString().Replace("Bearer ", "");
                 var userAuth = UserAuthenticationCheck.IsUserAuthenticated(accessToken);
                 var userRole = UserAuthenticationCheck.UserRoleCheck(accessToken);
-                if (userAuth == false && (userRole != "Admin" || userRole != "User"))
-                {
-                    throw new Exception("Unauthorized");
-                }
+                //if (userAuth == false && (userRole != "Admin" || userRole != "User"))
+                //{
+                //    throw new Exception("Unauthorized");
+                //}
                 if (command is null)
                 {
                     throw new Exception("Not Found");
@@ -370,10 +370,10 @@ namespace Teryt.WebApi.Controllers
                 {
                     return BadRequest("Something went wrong. Yours typeof command class is not GetCoutrysidesInCountyByIdCommand type. Plese check you request.");
                 }
-                else if (ex.Message == "Unauthorized")
-                {
-                    return Unauthorized("You have to be logged in to use this action.");
-                }
+                //else if (ex.Message == "Unauthorized")
+                //{
+                //    return Unauthorized("You have to be logged in to use this action.");
+                //}
                 else
                 {
                     return StatusCode(StatusCodes.Status500InternalServerError);
