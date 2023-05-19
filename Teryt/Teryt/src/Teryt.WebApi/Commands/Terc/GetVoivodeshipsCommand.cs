@@ -18,7 +18,7 @@ namespace Teryt.WebApi.Commands.Terc
 
             public async Task<IEnumerable<TERCDto>> Handle(GetVoivodeshipsCommand request, CancellationToken cancellationToken)
             {
-                var result = from v in context.TERCs
+                var result = from v in this.context.TERCs
                              where v.PowiatId == null && v.GminaId == null
                              && v.RodzGminaId == null
                              select new TERCDto

@@ -6,6 +6,7 @@ using Ocelot.DependencyInjection;
 using System.Reflection;
 using Teryt.WebApi.Data;
 
+
 var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
 
 try
@@ -48,6 +49,7 @@ try
     app.MapControllers();
 
     app.Run();
+ 
 }
 catch (Exception exception)
 {
@@ -58,6 +60,6 @@ finally
 {
     NLog.LogManager.Shutdown();
 }
-
+public partial class Program { } 
 
 
